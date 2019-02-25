@@ -3,7 +3,7 @@ class ClubsController < ApplicationController
     if params[:address].blank?
       @clubs = Club.all
     else
-      @club = Club.where("city ILIKE ?", "%#{params[:address]}%")
+      @club = Club.where("address ILIKE ?", "%#{params[:address]}%")
     end
   end
 
