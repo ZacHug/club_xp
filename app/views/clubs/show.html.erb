@@ -1,30 +1,40 @@
-<h1><%= @club.name %></h1>
+
+<%= cl_image_tag @club.photo , class: "center-img",height: 300, width: 300, crop: :fill %>
+<h1 class="padding-show-h1 text-white"><strong><%= @club.name  %></strong></h1>
+<div class="text-gold">
+<%= link_to "Map to club", clubs_path , class:"text-gold" %>
+</div>
 
 <div class="container">
-  <ul class="nav nav-pills nav-justified">
+  <ul class="nav nav-tabs nav-justified">
     <li class="active"><a href="#comments" data-toggle="tab">Live feed</a></li>
     <li><a href="#videos" data-toggle="tab">Streams</a></li>
     <li><a href="#description" data-toggle="tab">Details</a></li>
   </ul>
+
     <div class="tab-content">
       <div class="tab-pane fade in active"  id="comments">
-         <div class="comment-flex">
-           <% @club.comments.each do |comment| %>
-             <div>
-             <p><%= comment.content %></p>
-             </div>
-             <div class="comment-image">
-             <%= cl_image_tag comment.user.photo ,  height: 50, width: 50, crop: :thumb ,class: "img-circle" %>
-             </div>
-           <% end %>
-         </div>
 
+        <% @club.comments.each do |comment| %>
+         <div class="comment-container">
+            <div class="flex-container-img split">
+            <%= cl_image_tag comment.user.photo ,  height: 70, width: 70, crop: :thumb ,class: "img-circle" %>
+            </div>
+             <div class="flex-container-content split">
+              <h6><%= comment.user.name_string %></h6>
+              <p><%= comment.content %></p>
+            </div>
+          </div>
+
+       <% end %>
       </div>
+
       <div class="tab-pane" id="videos">
         <p>this is for the videosssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss</p>
-
       </div>
+
       <div class="tab-pane" id="description">
+
         <p>this id for the description</p>
 
       </div>
