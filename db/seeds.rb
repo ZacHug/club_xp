@@ -80,4 +80,16 @@ Comment.create!(
   club: club4,
   user: User.first
   )
+
+Comment.create!(
+  content: "WoW you'll never guess who just showed up!!!!!",
+  club: club1,
+  user: User.first
+  )
+
+Comment.create!(
+  content: "this is starting to get insane!!!!!! ",
+  club: club1,
+  user: User.first
+  )
 puts " done comment"
