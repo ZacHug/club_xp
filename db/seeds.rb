@@ -9,6 +9,7 @@
 User.destroy_all
 Club.destroy_all
 Comment.destroy_all
+ClubGenre.destroy_all
 
 puts "User"
  User.create!(
@@ -119,3 +120,11 @@ Comment.create!(
   user: User.first
   )
 puts " done comment"
+
+puts "adding music genre to a club"
+
+ClubGenre.create!( name: "Hip-Hop" , club: club1)
+ClubGenre.create!( name: "Dancehall" , club: club1)
+
+
+puts "done"
