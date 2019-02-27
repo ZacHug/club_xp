@@ -1,5 +1,6 @@
 
 <%= cl_image_tag @club.photo , class: "center-img",height: 300, width: 300, crop: :fill %>
+
 <h1 class="padding-show-h1 text-white"><strong><%= @club.name  %></strong></h1>
 <div class="text-gold">
 <%= link_to "Map to club", clubs_path , class:"text-gold" %>
@@ -15,18 +16,8 @@
     <div class="tab-content">
       <div class="tab-pane fade in active"  id="comments">
 
-        <% @club.comments.each do |comment| %>
-         <div class="comment-container">
-            <div class="flex-container-img split">
-            <%= cl_image_tag comment.user.photo ,  height: 70, width: 70, crop: :thumb ,class: "img-circle" %>
-            </div>
-             <div class="flex-container-content split">
-              <h6><%= comment.user.name_string %></h6>
-              <p><%= comment.content %></p>
-            </div>
-          </div>
+        <%= render "comments" %>
 
-       <% end %>
       </div>
 
       <div class="tab-pane" id="videos">
@@ -36,15 +27,15 @@
       <div class="tab-pane" id="description">
 
         <p>this id for the description</p>
-
-
       </div>
-
     </div>
-
-
-
 </div>
+
+
+
+
+
+
 
 
 
