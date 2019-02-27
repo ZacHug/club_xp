@@ -1,1 +1,10 @@
-_videos.html.erb
+<% @club.videos.each do |video| %>
+ <div class="video-container">
+    <video autoplay muted loop src="
+      <%= cl_video_path video.video %>
+    "></video>
+  </div>
+<% end %>
+
+
+<!-- width="460" height="290" -->

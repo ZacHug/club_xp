@@ -18,8 +18,8 @@ puts "User"
   email: "will@gmail.com",
   password: "123456",
   remote_photo_url: "https://s3-media3.fl.yelpcdn.com/bphoto/yooQiJ3Pe9i6h79lT0BgDw/ls.jpg"
-
   )
+
 puts "done User"
 
 
