@@ -132,3 +132,14 @@ ClubGenre.create!( name: "Dancehall" , club: club1)
 
 
 puts "done"
+
+puts "adding favorites to wilson"
+
+Favorite.create!(user: User.first , club: club1)
+Favorite.create!(user: User.first , club: club2)
+Favorite.create!(user: User.first , club: club3)
+
+
+puts "Done adding favorites to wilson"
+
+
