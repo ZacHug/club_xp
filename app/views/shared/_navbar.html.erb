@@ -46,6 +46,9 @@
   <!-- Dropdown list appearing on mobile only -->
   <% if controller_name == "clubs" && action_name == "show" %>
     <i class="far fa-heart"></i>
+
+    <% if current_user.favorites.find_by(club_id: @club.id) %>
+    <% end %>
   <%else%>
 
     <div class="navbar-club_xp-item hidden-md hidden-lg">
