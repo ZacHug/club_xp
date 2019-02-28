@@ -1,2 +1,34 @@
-<h1>User show page with favorites,details and choice to update</h1>
+<div class="avatar-info-container">
+  <div class="avatar-img">
+    <%= cl_image_tag @user.photo ,  height: 170, width: 170, crop: :thumb ,class: "img-circle" %>
+  </div>
+  <div class="user-info">
+    <h2><%= @user.name_string %></h2>
+  </div>
+</div>
 
+<br>
+
+<div class="container">
+  <ul class="nav nav-tabs nav-justified">
+    <li class="active"><a href="#favorites" data-toggle="tab">favorites</a></li>
+    <li><a href="#videos" data-toggle="tab">videos</a></li>
+    <li><a href="#history" data-toggle="tab">history</a></li>
+  </ul>
+
+  <div class="tab-content">
+
+    <div class="tab-pane fade in active"  id="favorites">
+      <%= render "favorites" %>
+    </div>
+
+    <div class="tab-pane" id="videos">
+      <%= render "videos" %>
+    </div>
+
+    <div class="tab-pane" id="history">
+        <%= render "history" %>
+    </div>
+
+  </div>
+</div>

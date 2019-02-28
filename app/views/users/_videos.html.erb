@@ -1,0 +1,10 @@
+<% @user.videos.each do |video| %>
+<div>
+  <div class="video-container">
+    <video autoplay muted loop src="
+      <%= cl_video_path video.video %>
+    "></video>
+  </div>
+</div>
+  <% end %>
+
