@@ -119,21 +119,22 @@ Video.create!(
 )
 
 Video.create!(
-  club: club1,
+  club: club2,
   user: User.first,
-  video: File.open("db/videos/02BLVD44.mp4")
+  video: File.open("db/videos/02APT200.mp4")
+
 )
 
 Video.create!(
-  club: club1,
+  club: club3,
   user: User.first,
-  video: File.open("db/videos/03BLVD44.mp4")
+  video: File.open("db/videos/03MUZ.mp4")
 )
 
 Video.create!(
-  club: club1,
+  club: club4,
   user: User.first,
-  video: File.open("db/videos/04BLVD44.mp4")
+  video: File.open("db/videos/04SAH.mp4")
 )
 
 puts "creating Comment"
