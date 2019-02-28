@@ -3,14 +3,20 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>TODO</title>
+    <title>CLUB XP</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
-  <body>
-    <%= render 'shared/navbar' %>
+  <body id="<%= controller_name %>-<%=action_name%>">
+    <% if controller_name == "clubs" && action_name == "show" %>
+      <%= render 'shared/navbar' %>
+    <% else %>
+      <%= render 'shared/navbar' %>
+    <% end %>
+
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= javascript_include_tag 'application' %>

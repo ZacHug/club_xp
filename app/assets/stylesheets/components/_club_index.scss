@@ -1,0 +1,18 @@
+
+.club-card {
+  height: 350px;
+  width: 500px;
+  background-size: cover;
+  margin: 10px;
+  padding-left: 15px;
+  display: flex;
+  border: 1px solid lightgray;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  a{
+    height: 350px;
+    text-decoration: none;
+    color: lightgray;
+  }
+
+}

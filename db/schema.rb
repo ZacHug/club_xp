@@ -10,20 +10,66 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_173305) do
+ActiveRecord::Schema.define(version: 2019_02_27_212129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "club_genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "club_id"
+    t.index ["club_id"], name: "index_club_genres_on_club_id"
+  end
 
   create_table "clubs", force: :cascade do |t|
     t.string "name"
     t.string "address"
     t.string "photo"
-    t.string "music_genre"
-    t.string "special_guest"
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
+    t.integer "price"
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text "content"
+    t.bigint "user_id"
+    t.bigint "club_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_comments_on_club_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "event_genres", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "name"
+    t.date "event_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "guests", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tables", force: :cascade do |t|
+    t.integer "price"
+    t.bigint "club_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_tables_on_club_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,4 +87,20 @@ ActiveRecord::Schema.define(version: 2019_02_25_173305) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "videos", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "club_id"
+    t.string "video"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_videos_on_club_id"
+    t.index ["user_id"], name: "index_videos_on_user_id"
+  end
+
+  add_foreign_key "club_genres", "clubs"
+  add_foreign_key "comments", "clubs"
+  add_foreign_key "comments", "users"
+  add_foreign_key "tables", "clubs"
+  add_foreign_key "videos", "clubs"
+  add_foreign_key "videos", "users"
 end

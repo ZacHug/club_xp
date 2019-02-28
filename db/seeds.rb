@@ -9,16 +9,17 @@
 User.destroy_all
 Club.destroy_all
 Comment.destroy_all
+ClubGenre.destroy_all
 
 puts "User"
-User.create! (
-  first_name:"Wilson",
+ User.create!(
+  first_name: "Wilson",
   last_name: "Jackson",
-  email:"will@gmail.com",
-  password:"123456",
+  email: "will@gmail.com",
+  password: "123456",
   remote_photo_url: "https://s3-media3.fl.yelpcdn.com/bphoto/yooQiJ3Pe9i6h79lT0BgDw/ls.jpg"
-
   )
+
 puts "done User"
 
 
@@ -28,28 +29,32 @@ club1 = Club.create!(
     name: "BLVD44",
     address: "2108 Blvd St-Laurent Montreal, QC H2X 2T2",
     remote_photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRblYbXP06x8Hfzzg6YQ5xmR9IVChDS9Vy2QnzGxScCWe1pTJv4",
-    description: " Blvd44 is a popular nightclub in Montreal and the perfect place to spend an exceptional evening with your friends!"
+    description: " Blvd44 is a popular nightclub in Montreal and the perfect place to spend an exceptional evening with your friends!",
+    price: "$20.00"
   )
 
 club2 = Club.create!(
     name: "Apartment 200",
     address: "3643 St-Laurent, APT.200 Montreal, QC",
-    remote_photo_url:"https://images.unsplash.com/photo-1541057591728-77510a9ea77f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-    description:"Most poppin' club in Montreal"
+    remote_photo_url: "https://images.unsplash.com/photo-1541057591728-77510a9ea77f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+    description: "Most poppin' club in Montreal",
+    price: "$15.00"
   )
 
 club3 = Club.create!(
     name: "Muzique",
-    address:"3781 St Laurent Blvd, Montreal, QC H2W 1X8",
-   remote_photo_url: "https://www.theplunge.com/wp-content/uploads/2017/07/travel_bachelor_party_montreal_best_nightclubs_stereo.jpg",
-    description:"Montreal's most famous club"
+    address: "3781 St Laurent Blvd, Montreal, QC H2W 1X8",
+    remote_photo_url: "https://www.theplunge.com/wp-content/uploads/2017/07/travel_bachelor_party_montreal_best_nightclubs_stereo.jpg",
+    description: "Montreal's most famous club",
+    price: "$25.00"
   )
 
 club4 = Club.create!(
     name: "Stereo After Hours",
     address: "858 St Catherine St E, Montreal, QC H2L 2E3",
     remote_photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/06/f2/de/e8/stereo-nightclub.jpg",
-    description:"Housing and Techno music for all"
+    description: "Housing and Techno music for all",
+    price: "$10.00"
   )
 
 puts "Club done"
@@ -67,6 +72,7 @@ Video.create!(
   club: club1,
   user: User.first,
   video: File.open("db/videos/02APT200.mp4")
+
 )
 
 Video.create!(
@@ -83,27 +89,47 @@ Video.create!(
 
 puts "creating Comment"
 
-Comment.create! (
+Comment.create!(
   content: "This club is LIT!!!! !",
-  club_id: club1,
-  user_id: User.first
+  club: club1,
+  user: User.first
   )
 
-Comment.create! (
+Comment.create!(
   content: "Wow! This club is amazing! You should come!",
-  club_id: club2,
-  user_id: User.first
+  club: club2,
+  user: User.first
   )
 
-Comment.create! (
+Comment.create!(
   content: "DJ is rocking over here! Thanks CLUB XP!",
-  club_id: club3,
-  user_id: User.first
+  club: club3,
+  user: User.first
   )
 
-Comment.create! (
+Comment.create!(
   content: "THIS CLUB IS JAMMED PACKED!!!! OMG!",
-  club_id: club4,
-  user_id: User.first
+  club: club4,
+  user: User.first
+  )
+
+Comment.create!(
+  content: "WoW you'll never guess who just showed up!!!!!",
+  club: club1,
+  user: User.first
+  )
+
+Comment.create!(
+  content: "this is starting to get insane!!!!!! ",
+  club: club1,
+  user: User.first
   )
 puts " done comment"
+
+puts "adding music genre to a club"
+
+ClubGenre.create!( name: "Hip-Hop" , club: club1)
+ClubGenre.create!( name: "Dancehall" , club: club1)
+
+
+puts "done"

@@ -1,0 +1,14 @@
+ <br>
+        <span class="text-gold">Location: </span><p class="text-white"><%= @club.address %></p>
+         <span class="text-gold">Music: </span>
+         <br>
+        <% @club.club_genres.each do |genre| %>
+        <span class="text-white">*<%= genre.name  %> </span>
+
+        <% end %>
+        <br>
+        <br>
+
+        <span class="text-gold" >Description: </span>
+
+        <p class="text-white"> <%= @club.description %></p>
