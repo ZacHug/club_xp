@@ -1,16 +1,16 @@
 
-<%= cl_image_tag @club.photo , class: "center-img",height: 300, width: 300, crop: :fill %>
+<%= cl_image_tag @club.photo , class: "center-img", crop: :fill %>
 
-<h1 class="padding-show-h1 text-white"><strong><%= @club.name  %></strong></h1>
-<div class="text-gold">
+<h1 class="padding-show-h1 text-white padding-left"><strong><%= @club.name  %></strong></h1>
+<div class="text-gold padding-left">
 <%= link_to "Map to club", clubs_path , class:"text-gold" %>
 </div>
 
-<div class="container">
-  <ul class="nav nav-tabs nav-justified">
-    <li class="active"><a href="#comments" data-toggle="tab">Live feed</a></li>
-    <li><a href="#videos" data-toggle="tab">Streams</a></li>
-    <li><a href="#description" data-toggle="tab">Details</a></li>
+
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#comments" data-toggle="tab">live feed</a></li>
+    <li><a href="#videos" data-toggle="tab">streams</a></li>
+    <li><a href="#description" data-toggle="tab">details</a></li>
   </ul>
 
   <div class="tab-content">
@@ -28,7 +28,7 @@
     </div>
 
   </div>
-</div>
+
 
 
 
