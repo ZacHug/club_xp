@@ -55,6 +55,32 @@ club4 = Club.create!(
 puts "Club done"
 
 
+puts "Creating videos"
+
+Video.create!(
+  club: club1,
+  user: User.first,
+  video: File.open("db/videos/01BLVD44.mp4")
+)
+
+Video.create!(
+  club: club1,
+  user: User.first,
+  video: File.open("db/videos/02APT200.mp4")
+)
+
+Video.create!(
+  club: club1,
+  user: User.first,
+  video: File.open("db/videos/03MUZ.mp4")
+)
+
+Video.create!(
+  club: club1,
+  user: User.first,
+  video: File.open("db/videos/04SAH.mp4")
+)
+
 puts "creating Comment"
 
 Comment.create! (
