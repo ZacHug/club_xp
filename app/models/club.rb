@@ -4,6 +4,7 @@ class Club < ApplicationRecord
   has_many :videos, dependent: :destroy
 
   has_many :club_genres, dependent: :destroy
+  has_many :favorites, dependent: :destroy
 
   validates :name, presence: true, uniqueness: true
   validates :address, presence: true, uniqueness: true
