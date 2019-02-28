@@ -10,9 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 2019_02_27_173938) do
-
+ActiveRecord::Schema.define(version: 2019_02_27_212129) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,7 +87,6 @@ ActiveRecord::Schema.define(version: 2019_02_27_173938) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-
   create_table "videos", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "club_id"
@@ -100,14 +97,10 @@ ActiveRecord::Schema.define(version: 2019_02_27_173938) do
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
-  add_foreign_key "comments", "clubs"
-  add_foreign_key "comments", "users"
-  add_foreign_key "videos", "clubs"
-  add_foreign_key "videos", "users"
-
   add_foreign_key "club_genres", "clubs"
   add_foreign_key "comments", "clubs"
   add_foreign_key "comments", "users"
   add_foreign_key "tables", "clubs"
-
+  add_foreign_key "videos", "clubs"
+  add_foreign_key "videos", "users"
 end
