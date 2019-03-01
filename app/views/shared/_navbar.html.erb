@@ -1,8 +1,8 @@
 <div class="navbar-club_xp">
   <!-- Logo -->
-  <%= link_to root_path, class: "navbar-club_xp-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
-  <% end %>
+
+  <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
+
 
   <!-- Right Navigation -->
   <div class="navbar-club_xp-right hidden-xs hidden-sm">
@@ -44,15 +44,24 @@
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-club_xp-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-club_xp-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
+  <% if controller_name == "clubs" && action_name == "show" %>
+    <i class="far fa-heart"></i>
+
+    <% if current_user.favorites.find_by(club_id: @club.id) %>
+    <% end %>
+  <%else%>
+
+    <div class="navbar-club_xp-item hidden-md hidden-lg">
+      <div class="dropdown">
+        <i data-toggle="dropdown">filter</i>
+        <ul class="dropdown-menu dropdown-menu-right navbar-club_xp-dropdown-menu">
+          <li><a href="#">recommended for you</a></li>
+          <li><a href="#">distance</a></li>
+          <li><a href="#">rating</a></li>
+          <li><a href="#">most popular</a></li>
+        </ul>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>
 
