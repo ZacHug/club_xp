@@ -4,13 +4,13 @@ class FavoritesController < ApplicationController
     @user = current_user
     @favorite = Favorite.create(user: @user, club_id: params[:club_id])
 
-    redirect_to user_path(@user)
+    redirect_to club_path(@club)
   end
 
-  def destroy
+  def update
     @user = current_user
     @favorite = Favorite.find(params[:id])
-    @user.favorites.destroy
-    redirect_to user_path
+    @favorite.destroy
+    redirect_to club_path(params[:club_id])
   end
 end

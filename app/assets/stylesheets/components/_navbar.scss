@@ -11,16 +11,27 @@
   align-items: center;
   justify-content: space-between;
 
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: 35px;
-  }
-  .fa-heart {
-    color: white;
-    font-size: 35px;
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
   }
 }
+
+.show-flaticon {
+  width: 40px;
+  margin-top: 10px;
+  filter: invert(1);
+}
+
+.show-flaticon-like {
+  width: 40px;
+  margin-top: 10px;
+  filter: invert(48%) sepia(100%) saturate(210%) hue-rotate(1075deg) brightness(118%) contrast(119%);
+
+
+}
+
 
 /* Logo */
 .navbar-club_xp-brand img {
