@@ -1,0 +1,18 @@
+<h3 class="text-gold margin-15px-left"><strong>Admissions: </strong></h3>
+<br>
+<h5 class="text-gold margin-15px-left"><strong><%= @club.name %></strong></h5>
+<br>
+<h5 class="text-gold margin-15px-left"><strong>Details</strong></h5>
+<p class="text-white margin-15px-left">Must be at least 21 years of age</p>
+<br>
+<p class="text-white margin-15px-left">Must have a VALID ID upon entrance</p>
+<br>
+<p class="text-white margin-15px-left">Proper Attire will be strictly enforced</p>
+<br>
+<p class="text-white margin-15px-left">Ladies enter and drink FREE until Midnight</p>
+
+<br>
+<%= simple_form_for ([@club , @admission]) do |f|%>
+<%= f.submit :admit_amount, as: :integer %>
+
+<% end %>
