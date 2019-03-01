@@ -155,19 +155,19 @@ Comment.create!(
 
 Comment.create!(
   content: "Wow! This club is amazing! You should come!",
-  club: club2,
+  club: club1,
   user: User.first
   )
 
 Comment.create!(
   content: "DJ is rocking over here! Thanks CLUB XP!",
-  club: club3,
+  club: club1,
   user: User.first
   )
 
 Comment.create!(
   content: "THIS CLUB IS JAMMED PACKED!!!! OMG!",
-  club: club4,
+  club: club1,
   user: User.first
   )
 
