@@ -193,4 +193,8 @@ Favorite.create!(user: User.first , club: club3)
 
 puts "Done adding favorites to wilson"
 
+# puts "making 1 admission"
+
+# puts "done making admmsion"
+
 

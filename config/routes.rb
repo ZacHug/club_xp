@@ -8,5 +8,6 @@ Rails.application.routes.draw do
     resources :comments, only: [:create]
     resources :favorites, only: [:create , :update]
     resources :videos, only: [:create]
+    resources :admissions, only: [:show,:new,:create]
   end
 end
