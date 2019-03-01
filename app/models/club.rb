@@ -1,5 +1,6 @@
 class Club < ApplicationRecord
   has_many :comments, dependent: :destroy
+  has_many :admissions, dependent: :destroy
 
   has_many :videos, dependent: :destroy
 
