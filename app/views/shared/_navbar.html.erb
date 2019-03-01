@@ -49,11 +49,11 @@
 
     <% if @favorite_club.present? %>
         <%= simple_form_for([@club, @favorite_club]) do |f| %>
-        <%= f.submit "Favs", :type => :image, :src => "../assets/favorite-heart-button.svg", :class =>"show-flaticon-like" %>
+        <%= f.submit "Favs", :type => :image, :src => image_path("favorite-heart-button.svg"), :class =>"show-flaticon-like" %>
       <% end %>
     <% else %>
       <%= simple_form_for ([@club, @favorite]) do |f| %>
-      <%= f.submit "Favs", :type => :image, :src => "../assets/dislike.svg", :class =>"show-flaticon" %>
+      <%= f.submit "Favs", :type => :image, :src => image_path("dislike.svg"), :class =>"show-flaticon" %>
      <% end %>
     <% end %>
   <%else%>
