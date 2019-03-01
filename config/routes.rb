@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   end
   resources :clubs, only: [:index, :show] do
     resources :comments, only: [:create]
+    resources :favorites, only: [:create , :update]
     resources :videos, only: [:create]
   end
 end
