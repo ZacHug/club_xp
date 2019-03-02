@@ -1,10 +1,10 @@
 <% @user.favorites.each do |favorite| %>
-<div>
-  <div>
-  <%= cl_image_tag favorite.club.photo, height: 250, width: 400, crop: :fill%>
-  </div>
   <div>
     <%= favorite.club.name %>
+  </div>
+<div>
+  <div class="club-card">
+  <%= cl_image_tag favorite.club.photo, width: 400, crop: :fill%>
   </div>
 </div>
   <% end %>
