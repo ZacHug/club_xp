@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .entrance-label {
@@ -15,15 +15,15 @@
   color: white;
 }
 
-.admit-btn-container {
+.plus-minus-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 40px;
 }
 
-.admit-amount-container {
-  display: flex;
+.plus-minus-btns {
+  font-size: 30px;
+  color: #f7b633;
 }
 
 .admit-amount {
@@ -31,51 +31,17 @@
   width: 100px;
 }
 
-.admit-btn {
+.pay-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pay-btn {
   background-color: #10316b;
   color: #f7b633;
-  padding: 10px 40px;
+  padding: 10px 80px;
   font-size: 23px;
   line-height: 1.33333;
   border-radius: 8px;
   border: none;
-}
-
-.select-btn-container {
-  margin-left: 20px;
-}
-
-.btns {
-  margin-bottom: 10px;
-}
-.up-btn {
-  margin: 0px;
-  height: 40px;
-  color: #f7b633;
-  font-size: 40px;
-}
-
-.dwn-btn {
-  height: 40px;
-  color: #f7b633;
-  font-size: 40px;
-}
-
-.checkout-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 150px;
-
-}
-
-.checkout-btn {
-  background-color: #10316b;
-  color: #f7b633;
-  padding: 13px 100px;
-  font-size: 23px;
-  line-height: 1.33333;
-  border-radius: 45px;
-  border: none;
-
 }

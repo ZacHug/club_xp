@@ -10,7 +10,7 @@
 <p class="text-white margin-15px-left">Proper Attire will be strictly enforced</p>
 <br>
 <p class="text-white margin-15px-left">Ladies enter and drink FREE until Midnight</p>
-
+<br>
 <br>
 
 <div class="entrance-price-container">
@@ -22,34 +22,27 @@
   </div>
 </div>
 
-<div class="admit-btn-container">
-  <div class="admit-amount-container">
-      <%= simple_form_for ([@club, @admission]) do |f|%>
-      <%= f.submit "ADMIT" , class: "admit-btn"%>
-      <% end %>
-    <div class="admit-amount">
-      <ul>
+<div class="plus-minus-container">
+  <div class="plus-minus-btns">
+    <i class="fas fa-minus" style="padding-right: 20px"></i>
+  </div>
+  <div class="admit-amount">
+    <ul>
         <h4>one</h4>
         <!-- <h4>two</h4>
         <h4>three</h4>
         <h4>four</h4>
         <h4>five</h4> -->
       </ul>
-    </div>
   </div>
-  <div class="select-btn-container">
-    <div class="btns">
-      <div class="up-btn">
-        <i class="fas fa-sort-up up-btn"></i>
-      </div>
-      <div class="dwn-btn">
-        <i class="fas fa-sort-down dwn-btn"></i>
-      </div>
-    </div>
+  <div class="plus-minus-btns">
+    <i class="fas fa-plus" style="padding-left: 40px"></i>
   </div>
 </div>
-<div class="checkout-container">
+<br>
+<br>
+<div class="pay-btn-container">
   <%= simple_form_for ([@club, @admission]) do |f|%>
-  <%= f.submit "CHECKOUT" , class: "checkout-btn"%>
+  <%= f.submit "PAY" , class: "pay-btn"%>
   <% end %>
 </div>
