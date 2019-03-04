@@ -6,13 +6,13 @@
 
   <div class="flex-container-content">
 
-    <h5><strong><%= comment.user.name_string %></strong></h5>
+    <h5 class="text-gold"><strong><%= comment.user.name_string %></strong></h5>
     <p><%= comment.content %></p>
   </div>
   </div>
 
   <div class="comment-time-container">
-    <span class="text-gold"> <%= time_ago_in_words(comment.created_at) %> ago </span>
+    <span class="text-white"> <%= time_ago_in_words(comment.created_at) %> ago </span>
   </div>
 </div>
 
