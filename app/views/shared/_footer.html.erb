@@ -23,9 +23,11 @@
     <% profile_class = "footer-icons" %>
     <% profile_class += " text-gold" if controller_name == "users"%>
 
+<% if current_user.present? %>
     <%= link_to user_path(current_user), :id => "profile-icon", :class => profile_class do %>
     <i class="fas fa-user-alt"></i>
     <!-- <p class="text-gold" style="font-size: 13px">profile</p> -->
+    <% end %>
     <% end %>
   </div>
 </div>
