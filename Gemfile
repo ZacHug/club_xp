@@ -1,9 +1,13 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+<<<<<<< HEAD
+=======
 gem 'money-rails'
+>>>>>>> 693b726246999ca288570568332158e40ef0176a
 gem 'geocoder'
 gem 'cloudinary', '~> 1.9.1'
+gem 'faker', '~> 1.9.3'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'carrierwave', '~> 1.2'
 gem 'bootsnap', require: false
@@ -32,5 +36,4 @@ group :development, :test do
   gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # gem 'dotenv-rails
 end
