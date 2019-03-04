@@ -15,8 +15,10 @@
 
 .comment-container{
   display: flex;
+  position: relative;
   background: #04142C;
   align-items: center;
+  justify-content: space-between;
   color: white;
   margin: 15px 15px;
   border-radius: 5px;
@@ -38,12 +40,30 @@
 
 .flex-container-content{
   margin-left: 10px;
+  width:170px ;
+  h5 {
+    font-size: 22px;
+  }
+  p {
+    font-size: 15px;
+  }
 
 }
 
 .flex-container-img{
+  display: flex;
   margin-left: 10px;
+}
 
+.comment-time-container {
+  display: flex;
+  position: absolute ;
+  top: 1px;
+  right: 10px;
+  height: 50px;
+  width: 70px;
+  font-size: 13px;
+  flex-direction: column-reverse;
 }
 
 .center-img{
