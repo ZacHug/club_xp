@@ -1,17 +1,26 @@
 <% @club.comments.each do |comment| %>
+
  <div class="comment-container" >
     <div class="flex-container-img">
-    <%= cl_image_tag comment.user.photo ,  height: 60, width: 60, crop: :thumb ,class: "img-circle" %>
-    </div>
-     <div class="flex-container-content">
-      <h5><strong><%= comment.user.name_string %></strong></h5>
-      <p><%= comment.content %></p>
 
-    </div>
-    <!-- put this this_ago right under at the proper location -->
-    <span class="text-gold"> <%= time_ago_in_words(comment.created_at) %> ago </span>
+    <%= cl_image_tag comment.user.photo ,  height: 60, width: 60, crop: :thumb ,class: "img-circle" %>
+
+  <div class="flex-container-content">
+
+    <h5 class="text-gold"><strong><%= comment.user.name_string %></strong></h5>
+    <p><%= comment.content %></p>
   </div>
+  </div>
+
+  <div class="comment-time-container">
+    <span class="text-white"> <%= time_ago_in_words(comment.created_at) %> ago </span>
+  </div>
+</div>
+
 <% end %>
 
 
+
  <%= render "form" , club: @club, comment: @comment%>
+
+
