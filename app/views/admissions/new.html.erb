@@ -1,0 +1,20 @@
+<%= cl_image_tag @club.photo , class: "center-img", crop: :fill %>
+
+ <ul class="nav nav-tabs">
+    <li class="active"><a href="#admission" data-toggle="tab">admission</a></li>
+    <li><a href="#service" data-toggle="tab">services</a></li>
+ </ul>
+
+  <div class="tab-content" style="margin-bottom: 150px">
+
+    <div class="tab-pane fade in active"  id="admission">
+      <%= render "admissions" %>
+    </div>
+
+    <div class="tab-pane" id="service">
+      <%= render "services" %>
+    </div>
+
+  </div>
+
+

@@ -1,0 +1,47 @@
+.entrance-price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.entrance-label {
+  font-size: 25px;
+  margin-right: 15px;
+}
+
+.price-label {
+  font-size: 22px;
+  color: white;
+}
+
+.plus-minus-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.plus-minus-btns {
+  font-size: 30px;
+  color: #f7b633;
+}
+
+.admit-amount {
+  color: white;
+  width: 100px;
+}
+
+.pay-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.pay-btn {
+  background-color: #10316b;
+  color: #f7b633;
+  padding: 10px 80px;
+  font-size: 23px;
+  line-height: 1.33333;
+  border-radius: 8px;
+  border: none;
+}

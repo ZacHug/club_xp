@@ -1,6 +1,10 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
 
+<<<<<<< HEAD
+=======
+gem 'money-rails'
+>>>>>>> 693b726246999ca288570568332158e40ef0176a
 gem 'geocoder'
 gem 'cloudinary', '~> 1.9.1'
 gem 'faker', '~> 1.9.3'

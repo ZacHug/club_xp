@@ -45,12 +45,22 @@
 
   <!-- Dropdown list appearing on mobile only -->
   <% if controller_name == "clubs" && action_name == "show" %>
-    <i class="far fa-heart"></i>
+   <!--  <i class="far fa-heart"></i> -->
+
+    <% if @favorite_club.present? %>
+        <%= simple_form_for([@club, @favorite_club]) do |f| %>
+        <%= f.submit "Favs", :type => :image, :src => image_path("favorite-heart-button.svg"), :class =>"show-flaticon-like" %>
+      <% end %>
+    <% else %>
+      <%= simple_form_for ([@club, @favorite]) do |f| %>
+      <%= f.submit "Favs", :type => :image, :src => image_path("dislike.svg"), :class =>"show-flaticon" %>
+     <% end %>
+    <% end %>
   <%else%>
 
     <div class="navbar-club_xp-item hidden-md hidden-lg">
       <div class="dropdown">
-        <i data-toggle="dropdown">filter</i>
+        <i data-toggle="dropdown" class="text-white dwn-btn"><i class="fas fa-caret-down"></i></i></i></i>
         <ul class="dropdown-menu dropdown-menu-right navbar-club_xp-dropdown-menu">
           <li><a href="#">recommended for you</a></li>
           <li><a href="#">distance</a></li>

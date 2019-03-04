@@ -10,10 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_27_212129) do
+ActiveRecord::Schema.define(version: 2019_03_01_161148) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admissions", force: :cascade do |t|
+    t.date "date_of"
+    t.integer "admit_amount"
+    t.bigint "user_id"
+    t.bigint "club_id"
+    t.bigint "table_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "price_cents", default: 0, null: false
+    t.index ["club_id"], name: "index_admissions_on_club_id"
+    t.index ["table_id"], name: "index_admissions_on_table_id"
+    t.index ["user_id"], name: "index_admissions_on_user_id"
+  end
 
   create_table "club_genres", force: :cascade do |t|
     t.string "name"
@@ -58,6 +72,15 @@ ActiveRecord::Schema.define(version: 2019_02_27_212129) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "club_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["club_id"], name: "index_favorites_on_club_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
+
   create_table "guests", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -65,7 +88,6 @@ ActiveRecord::Schema.define(version: 2019_02_27_212129) do
   end
 
   create_table "tables", force: :cascade do |t|
-    t.integer "price"
     t.bigint "club_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -97,9 +119,14 @@ ActiveRecord::Schema.define(version: 2019_02_27_212129) do
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
+  add_foreign_key "admissions", "clubs"
+  add_foreign_key "admissions", "tables"
+  add_foreign_key "admissions", "users"
   add_foreign_key "club_genres", "clubs"
   add_foreign_key "comments", "clubs"
   add_foreign_key "comments", "users"
+  add_foreign_key "favorites", "clubs"
+  add_foreign_key "favorites", "users"
   add_foreign_key "tables", "clubs"
   add_foreign_key "videos", "clubs"
   add_foreign_key "videos", "users"

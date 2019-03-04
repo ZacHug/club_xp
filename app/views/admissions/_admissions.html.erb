@@ -1,0 +1,50 @@
+<h3 class="text-gold margin-15px-left"><strong>Admissions: </strong></h3>
+<br>
+<h4  class="text-white margin-15px-left" style="font-size: 32px"><strong><%= @club.name %></strong></h4>
+<br>
+<h5 class="text-gold margin-15px-left"><strong>Details</strong></h5>
+<ul class="text-white margin-15px-left">
+  <li><strong>Must be at least 21 years of age</strong></li>
+  <br>
+  <li><strong>Must have a VALID ID upon entrance</strong></li>
+  <br>
+  <li><strong>Proper Attire will be strictly enforced</strong></li>
+  <br>
+  <li><strong>Ladies enter and drink FREE until Midnight</strong></li>
+</ul>
+<br>
+<br>
+
+<div class="entrance-price-container">
+  <div class="entrance-label">
+    <span class="text-gold middle-fix"><strong>ENTRANCE: </strong></span>
+  </div>
+  <div class="price-label">
+    <span><strong> $<%= @club.price %>.00</strong></span>
+  </div>
+</div>
+
+<div class="plus-minus-container">
+  <div class="plus-minus-btns">
+    <i class="fas fa-minus" style="padding-right: 20px"></i>
+  </div>
+  <div class="admit-amount">
+    <ul>
+        <h4>one</h4>
+        <!-- <h4>two</h4>
+        <h4>three</h4>
+        <h4>four</h4>
+        <h4>five</h4> -->
+      </ul>
+  </div>
+  <div class="plus-minus-btns">
+    <i class="fas fa-plus" style="padding-left: 40px"></i>
+  </div>
+</div>
+<br>
+<br>
+<div class="pay-btn-container">
+  <%= simple_form_for ([@club, @admission]) do |f|%>
+  <%= f.submit "PAY" , class: "pay-btn"%>
+  <% end %>
+</div>

@@ -1,8 +1,8 @@
 /* Main navbar */
 .navbar-club_xp {
   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: transparent;
-  position: absolute;
+  background: rgba(4, 20, 44, 0.6);
+  position: fixed;
   width: 100%;
   transition: all 0.3s ease;
   height: 70px;
@@ -10,13 +10,31 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  z-index: 4;
 
-  a {
-    text-decoration: none;
+a {
+  text-decoration: none;
+  color: white;
+  font-size: 35px;
   }
 }
 
-/* Logo */
+.show-flaticon {
+  width: 40px;
+  margin-top: 10px;
+  filter: invert(1);
+}
+
+.show-flaticon-like {
+  width: 40px;
+  margin-top: 10px;
+  filter: invert(48%) sepia(100%) saturate(210%) hue-rotate(1075deg) brightness(118%) contrast(119%);}
+
+.dwn-btn {
+  font-size: 45px;
+  color: white;
+
+}/* Logo */
 .navbar-club_xp-brand img {
   height: 50px;
 }
