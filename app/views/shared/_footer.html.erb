@@ -1,0 +1,22 @@
+<div id="footer">
+  <div class="footer-icons">
+    <%= link_to clubs_path(@user),:class => "footer-icons" do %>
+    <i class="fas fa-search-location"></i>
+    <p>search</p>
+    <% end %>
+  </div>
+  <div class="footer-icons">
+    <%= link_to new_club_admission_path([@club, @admission]),:class => "footer-icons" do %>
+    <i class="fas fa-ticket-alt"></i>
+    <p>admission</p>
+    <% end %>
+  </div>
+ <div class="footer-icons">
+    <%= link_to user_path(current_user),:class => "footer-icons" do %>
+    <i class="fas fa-user-alt"></i>
+    <p>profile</p>
+    <% end %>
+  </div>
+</div>
+
+

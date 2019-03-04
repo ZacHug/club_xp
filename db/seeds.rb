@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 User.destroy_all
 Club.destroy_all
 Comment.destroy_all
@@ -20,6 +12,23 @@ puts "User"
   remote_photo_url: "https://s3-media3.fl.yelpcdn.com/bphoto/yooQiJ3Pe9i6h79lT0BgDw/ls.jpg"
   )
 
+<<<<<<< Updated upstream
+=======
+ User.create!(
+  first_name: "Ryan",
+  last_name: "Howard",
+  email: "ryan@gmail.com",
+  password: "123456",
+  remote_photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kyrie_Irving_June_2016_crop.jpg/270px-Kyrie_Irving_June_2016_crop.jpg"
+  )
+
+ # User.create!
+ #  first_name: "",
+ #  last_name: "",
+ #  email: "",
+ #  password: "",
+ #  remote_photo_url: ""
+>>>>>>> Stashed changes
 puts "done User"
 
 
