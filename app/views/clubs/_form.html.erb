@@ -1,0 +1,5 @@
+ <%= simple_form_for [club, comment],remote: true, defaults: { input_html: { class: 'flex-form'} } do |f| %>
+    <%= f.input :content %>
+    <%= f.submit "post", class: "btn btn-primary" %>
+    <% end %>
+
