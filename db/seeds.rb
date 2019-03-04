@@ -12,11 +12,6 @@ puts "User"
   remote_photo_url: "https://s3-media3.fl.yelpcdn.com/bphoto/yooQiJ3Pe9i6h79lT0BgDw/ls.jpg"
   )
 
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> 693b726246999ca288570568332158e40ef0176a
  User.create!(
   first_name: "Ryan",
   last_name: "Howard",
@@ -25,18 +20,21 @@ puts "User"
   remote_photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kyrie_Irving_June_2016_crop.jpg/270px-Kyrie_Irving_June_2016_crop.jpg"
   )
 
-<<<<<<< HEAD
- # User.create!
- #  first_name: "",
- #  last_name: "",
- #  email: "",
- #  password: "",
- #  remote_photo_url: ""
->>>>>>> Stashed changes
-=======
->>>>>>> 693b726246999ca288570568332158e40ef0176a
 puts "done User"
 
+require 'faker'
+
+puts 'Creating 10 fake user...'
+10.times do
+  user = User.new(
+    first_name:Faker::Name.name
+    last_name:Faker::Name.name
+    email:Faker::Email.email
+    password:"123456"
+  )
+  user.save!
+end
+puts 'Finished!'
 
 puts "Creating Club"
 

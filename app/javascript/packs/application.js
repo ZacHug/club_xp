@@ -1,2 +1,2 @@
 import "bootstrap";
-import "_footer_icons";
+import "./_footer_icons";
