@@ -13,8 +13,17 @@ class CommentsController < ApplicationController
     @club = Club.find(params[:club_id])
     @user = current_user
     @comment = Comment.create(user: @user, club_id: params[:club_id], content: params[:comment][:content])
-
-    redirect_to club_path(@club)
+    if @comment.save
+      respond_to do |create|
+        create.html {redirect_to club_path(@club)}
+        create.js
+      end
+    else
+      respond_to do |format|
+        create.html {render 'clubs/show'}
+        create.js
+      end
+    end
   end
 
 
