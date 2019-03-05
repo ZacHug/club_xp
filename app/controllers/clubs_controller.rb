@@ -14,5 +14,6 @@ class ClubsController < ApplicationController
     @comment.club = @club
     @favorite_club = current_user.favorites.find_by(club_id: @club.id)
     @favorite = Favorite.new
+    @markers = { lng: @club.longitude, lat: @club.latitude }
   end
 end
