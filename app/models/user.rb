@@ -8,6 +8,8 @@ class User < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :videos, dependent: :destroy
   has_many :admissions, dependent: :destroy
+  validates :first_name, presence: true
+  validates :last_name, presence: true
 
   def name_string
     first = self.first_name.capitalize
