@@ -1,5 +1,6 @@
 <div id="footer">
   <div class="footer-icons">
+
     <% profile_class = "footer-icons" %>
     <% profile_class += " text-gold" if controller_name == "clubs" && action_name == "index"%>
     <%= link_to clubs_path(@user), :id => "search-icon", :class => profile_class do %>
@@ -22,9 +23,12 @@
     <% profile_class = "footer-icons" %>
     <% profile_class += " text-gold" if controller_name == "users"%>
     <% if user_signed_in? %>
+
     <%= link_to user_path(current_user), :id => "profile-icon", :class => profile_class do %>
     <i class="fas fa-user-alt"></i>
     <% end %>
     <% end %>
+    <% end %>
   </div>
 </div>
+

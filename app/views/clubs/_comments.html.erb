@@ -1,7 +1,8 @@
 
+
 <div class="all-container" style="margin-bottom: 85px;">
 
-<% @club.comments.each do |comment| %>
+<% @club.comments.order('created_at DESC').each do |comment| %>
 
  <div class="comment-container" >
     <div class="flex-container-img">
