@@ -20,8 +20,9 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <%= render 'shared/footer' %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag '_footer_icons' %>
   </body>
+
+  <%= javascript_include_tag 'application' %>
+  <%= javascript_pack_tag 'application' %>
+  <script src="https://firekast.io/sdk/js/latest/firekast.min.js"></script>
 </html>

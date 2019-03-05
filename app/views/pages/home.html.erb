@@ -1,19 +1,25 @@
 <div class="homepage">
-  <div id="club_xp-logo">
-      <!-- image of logo -->
-      <%= image_tag 'clubxp_v2.png' %>
+
+  <!-- The form -->
+
+<div id="club_xp-logo">
+
+
+    <!-- image of logo -->
+    <%= image_tag 'clubxp.jpg' %>
+</div>
+<div id="homepage-cta">
+
+  <div class="homepage_text">
+    <h2>See What's Happening Live...</h2>
   </div>
 
-  <div id="homepage-cta">
-    <div class="homepage_text">
-      <h2>See What's Happening Live...</h2>
-    </div>
 
-    <div class="search-box">
-      <form class="example" action="/clubs">
-        <input type="text" placeholder="Postal code or City" name="search">
-        <button type="submit"><i class="fa fa-search"></i></button>
-      </form>
-    </div>
+  <div class="search-box">
+    <form class="example" action="/clubs">
+      <input type="text" placeholder="...what city are you in?" name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
   </div>
 </div>
