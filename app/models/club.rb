@@ -13,4 +13,11 @@ class Club < ApplicationRecord
   mount_uploader :photo, PhotoUploader
   geocoded_by :address
   after_validation :geocode, if: :will_save_change_to_address?
+
+
+  def full_address
+    addy = self.address
+    ace = self.postalcode
+    return "#{addy}#{ace}"
+  end
 end
