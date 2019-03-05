@@ -13,7 +13,7 @@
 <p id="open-map" class="text-gold" style="margin-left: 25px">MAP TO CLUB  <i class="fas fa-angle-down text-white"></i></p>
 <p id="close-map" class="text-gold hide" style="margin-left: 25px">CLOSE MAP  <i class="fas fa-angle-up text-white"></i></p>
 
-<div id="map" style="width: 100%; height: 240px;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+<div id="map" style="width: 100vw; height: 240px; display: none;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div>
 <div class="text-gold padding-left">
