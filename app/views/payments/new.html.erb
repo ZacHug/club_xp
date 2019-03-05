@@ -1,0 +1,40 @@
+<div class="center-img" style="background-image: url('<%= @admission.club.photo %>')"></div>
+<h3 class="text-gold margin-15px-left" style="margin-top: 25px"><strong>Confirmation: </strong></h3>
+
+
+ <div id='club-header'>
+  <h1 class="padding-show-h1 text-white padding-left"><strong><%= @admission.club.name  %></strong></h1>
+  <div class="club-rating">
+    <% 4.times do %>
+      <%= image_tag 'clubxp-fire.svg'%>
+    <% end %>
+  </div>
+</div>
+
+<div class="payment-summary-containter">
+  <p class="text-gold margin-15px-left" >summary</p>
+  <p class="text-white margin-15px-left">--------------------------</p>
+</div>
+
+<div class="pay-with-card-btn-container">
+  <%= form_tag admission_payments_path(@admission) do %>
+  <article>
+    <br>
+    <label class="amount text-gold" style="font-size: 24px">
+      <span class="text-gold">Amount:</span> <span class="text-white"><%= humanized_money_with_symbol(@admission.amount) %></span>
+    </label>
+  </article>
+  <br>
+  <script src="https://checkout.stripe.com/checkout.js" class="stripe-button margin-15px-left"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-name="My Payment"
+    data-email="<%= current_user.email %>"
+    data-description="Club <%= @admission.club.name %>"
+    data-amount="<%= @admission.amount_cents %>"
+    data-currency="<%= @admission.amount.currency %>"></script>
+
+<% end %>
+</div>
+<br>
+<br>
+<p class="text-white margin-15px-left">--------------------------</p>
