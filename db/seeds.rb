@@ -52,7 +52,7 @@ club1 = Club.create!(
   )
 
 club2 = Club.create!(
-    name: "Apartment 200",
+    name: "Apt. 200",
     address: "3643 St Laurent Blvd, Montreal",
     remote_photo_url: "https://images.unsplash.com/photo-1541057591728-77510a9ea77f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description: "Buzzy, brick-lined bar with hip, vintage decor, a pool table & arcade games, plus bottle service.",
@@ -233,8 +233,7 @@ COMMENTS = [
   "Tell your friends about Club XP!",
   "I won't forget this night all thanks to Club XP",
   "Music is on point :D",
-  ""
-]
+  ]
 
 OTHER_CLUBS.each do |club|
   OTHER_USERS.each do |user|

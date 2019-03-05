@@ -13,8 +13,10 @@ class ClubsController < ApplicationController
     @club = Club.find(params[:id])
     @comment = Comment.new
     @comment.club = @club
-    @favorite_club = current_user.favorites.find_by(club_id: @club.id)
     @favorite = Favorite.new
     @markers = { lng: @club.longitude, lat: @club.latitude }
+    if user_signed_in?
+      @favorite_club = current_user.favorites.find_by(club_id: @club.id)
+    end
   end
 end
