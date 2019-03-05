@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.5.3'
+gem 'rqrcode', '~> 0.10.1'
+gem 'stripe'
 gem 'money-rails'
 gem 'geocoder'
 gem 'cloudinary', '~> 1.9.1'

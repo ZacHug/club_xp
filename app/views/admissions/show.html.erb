@@ -1,0 +1,14 @@
+<div class="center-img" style="background-image: url('<%= @admission.club.photo %>')"></div>
+<h2 class="text-white margin-15px-left">Payment Receipt</h2>
+<br>
+<div class="text-gold" style="font-size: 24px;">
+  <li>Status: <span class="text-white"><%= @admission.state.capitalize %></span></li>
+  <br>
+  <li>Club: <span class="text-white"><%= @admission.club.name %></span></li>
+  <br>
+  <li>Amount: <span class="text-white"><%= humanized_money_with_symbol(@admission.amount) %></span></li>
+</div>>
+<br>
+<div class="qrcode" style="margin-bottom: 85px;">
+<%= raw @qr.as_html %>
+</div>

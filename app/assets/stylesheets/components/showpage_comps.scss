@@ -115,6 +115,10 @@
   display: block !important;
   height: auto !important;
 }
+ .mapboxgl-canvas {
+  width: 100vw !important;
+  height: 240px !important;
+ }
 // .padding-left {
 //   padding-left: 6%;
 //   margin-bottom: 3%;
