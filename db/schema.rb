@@ -12,6 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2019_03_05_212038) do
 
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -49,6 +50,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_212038) do
     t.float "latitude"
     t.float "longitude"
     t.integer "price"
+    t.string "postalcode"
   end
 
   create_table "comments", force: :cascade do |t|
