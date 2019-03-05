@@ -221,6 +221,32 @@ Favorite.create!(user: User.first , club: club3)
 
 puts "Done adding favorites to wilson"
 
+
+puts ""
+
+OTHER_CLUBS = [club2, club3, club4, club5, club6, club7, club8, club9, club10]
+OTHER_USERS = User.where.not("first_name = ? OR first_name = ?", "Wilson", "Ryan")
+COMMENTS = [
+  "Amazing right now!",
+  "It's lit!!!",
+  "Thanks Club XP!!",
+  "Tell your friends about Club XP!",
+  "I won't forget this night all thanks to Club XP",
+  "Music is on point :D",
+  ""
+]
+
+OTHER_CLUBS.each do |club|
+  OTHER_USERS.each do |user|
+    Comment.create({
+      user: user,
+      club: club,
+      content: COMMENTS.sample
+    })
+  end
+end
+
+
 # puts "making 1 admission"
 
 # puts "done making admmsion"
