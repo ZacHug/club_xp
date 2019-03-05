@@ -5,7 +5,6 @@
     <% profile_class += " text-gold" if controller_name == "clubs" && action_name == "index"%>
     <%= link_to clubs_path(@user), :id => "search-icon", :class => profile_class do %>
     <i class="fas fa-search-location"></i>
-    <!-- <p class="text-gold" style="font-size: 13px">search</p> -->
     <% end %>
   </div>
 
@@ -15,17 +14,16 @@
 
     <%= link_to new_club_admission_path([@club, @admission]), :id => "admission-icon", :class => profile_class do %>
     <i class="fas fa-credit-card"></i>
-    <!-- <p class="text-gold" style="font-size: 13px">admission</p> -->
     <% end %>
   </div>
 
   <div class="footer-icons">
     <% profile_class = "footer-icons" %>
     <% profile_class += " text-gold" if controller_name == "users"%>
-
+<%if current_user.present? %>
     <%= link_to user_path(current_user), :id => "profile-icon", :class => profile_class do %>
     <i class="fas fa-user-alt"></i>
-    <!-- <p class="text-gold" style="font-size: 13px">profile</p> -->
+    <% end %>
     <% end %>
   </div>
 </div>
