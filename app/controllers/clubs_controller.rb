@@ -1,4 +1,5 @@
 class ClubsController < ApplicationController
+  skip_before_action :authenticate_user!
 
   def index
     if params[:address].blank?
@@ -14,5 +15,6 @@ class ClubsController < ApplicationController
     @comment.club = @club
     @favorite_club = current_user.favorites.find_by(club_id: @club.id)
     @favorite = Favorite.new
+    @markers = { lng: @club.longitude, lat: @club.latitude }
   end
 end

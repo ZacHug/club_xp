@@ -1,5 +1,5 @@
  <br>
-        <span class="text-gold margin-15px-left">Location: </span><p class="text-white margin-15px-left"><%= @club.address %></p>
+        <span class="text-gold margin-15px-left">Location: </span><p class="text-white margin-15px-left"><%= @club.full_address %></p>
          <span class="text-gold margin-15px-left">Music: </span>
          <br>
         <% @club.club_genres.each do |genre| %>
@@ -12,3 +12,5 @@
         <span class="text-gold margin-15px-left" >Description: </span>
 
         <p class="text-white margin-15px-left"> <%= @club.description %></p>
+
+

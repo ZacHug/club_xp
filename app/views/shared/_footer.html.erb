@@ -9,22 +9,25 @@
   </div>
 
   <div class="footer-icons">
-    <% profile_class = "footer-icons" %>
-    <% profile_class += " text-gold" if controller_name == "admissions" %>
-
-    <%= link_to new_club_admission_path([@club, @admission]), :id => "admission-icon", :class => profile_class do %>
-    <i class="fas fa-credit-card"></i>
+    <% if (controller_name === "clubs" && action_name === "show") || (controller_name === "admissions" ) %>
+      <% profile_class = "footer-icons" %>
+      <% profile_class += " text-gold" if controller_name == "admissions" %>
+      <%= link_to new_club_admission_path([@club, @admission]), :id => "admission-icon", :class => profile_class do %>
+      <i class="fas fa-credit-card"></i>
+      <% end %>
     <% end %>
   </div>
 
   <div class="footer-icons">
     <% profile_class = "footer-icons" %>
     <% profile_class += " text-gold" if controller_name == "users"%>
-<%if current_user.present? %>
+    <% if user_signed_in? %>
+
     <%= link_to user_path(current_user), :id => "profile-icon", :class => profile_class do %>
     <i class="fas fa-user-alt"></i>
     <% end %>
     <% end %>
+
   </div>
 </div>
 

@@ -3,9 +3,7 @@
     <%= favorite.club.name %>
   </div>
 <div>
-  <div class="club-card">
-  <%= cl_image_tag favorite.club.photo, width: 400, crop: :fill%>
-  </div>
+  <div class="center-img" style="background-image: url('<%= favorite.club.photo %>')"></div>
 </div>
   <% end %>
 
