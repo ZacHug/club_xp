@@ -2,10 +2,12 @@ class ClubsController < ApplicationController
 skip_before_action :authenticate_user!
 
   def index
-    if params[:address].blank?
-      @clubs = Club.all
+    if params[:address].present?
+      @clubs = Club.near(params[:address])
+    elsif params[:lat].present? && params[:lng].present?
+      @clubs = Club.near([params[:lat], params[:lng]])
     else
-      @club = Club.near(params[:address])
+      @clubs = Club.all
     end
   end
 

@@ -4,7 +4,7 @@
 <div id='club-header'>
   <h3 class="padding-show-h1 text-white padding-left"><strong><%= @club.name %></strong></h3>
   <div class="club-rating">
-    <% 4.times do %>
+    <% @club.hotness.times do %>
       <%= image_tag 'clubxp-fire.svg'%>
     <% end %>
   </div>

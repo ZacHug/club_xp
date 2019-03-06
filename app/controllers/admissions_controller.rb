@@ -7,7 +7,7 @@ class AdmissionsController < ApplicationController
 
   def create
     @club = Club.find(params[:club_id])
-    @admission = Admission.create!(customers: params[:admit_cnt].to_i, club_id: @club.id, amount: params[:admit_cnt].to_i * @club.price, state: "pending", user_id: current_user.id)
+    @admission = Admission.create!(customers: params[:admit_cnt].to_i, club_id: @club.id, amount: params[:admit_cnt].to_i * @club.price, state: "Pending", user_id: current_user.id)
 
     redirect_to new_admission_payment_path(@admission)
   end
