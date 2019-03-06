@@ -1,4 +1,19 @@
 <div class="all-container" style="margin-bottom: 85px;">
+
+<% if @club.stream.present? %>
+ <div id="stream" class="video-container" style="border-bottom: 1px solid white"></div>
+  <script>
+    Firekast.API.init({
+      api_key: '$2a$10$AYuUVss/pxuPCIDaZqb0suxyWTVU0eJNQXPmYfL/PwJjo00EV6HpO'
+    });
+
+    const player = new Firekast.Player({
+      parent_id:   '#stream',
+      stream_id:   '<%= @club.stream %>'
+    });
+  </script>
+<% end %>
+
 <% @club.videos.each do |video| %>
  <div class="video-container" style="border-bottom: 1px solid white">
     <video autoplay muted loop src="
