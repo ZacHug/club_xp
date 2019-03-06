@@ -28,6 +28,6 @@ class PaymentsController < ApplicationController
   private
 
   def set_admission
-    @admission = current_user.admissions.where(state: 'pending').find(params[:admission_id])
+    @admission = current_user.admissions.where(state: 'Pending').find(params[:admission_id])
   end
 end

@@ -27,3 +27,8 @@ if (open_map && close_map) {
     $("#map").slideUp(400)
   });
 }
+
+navigator.geolocation.getCurrentPosition((position) => {
+  const distanceLink = document.querySelector("#sort-by-distance");
+  distanceLink.href = `/clubs?lat=${position.coords.latitude}&lng=${position.coords.longitude}`
+});
