@@ -1,10 +1,11 @@
+<div class="profile-video-container" style="margin-bottom: 85px">
 <% @user.videos.each do |video| %>
 <div>
-  <div class="video-container">
+  <div class="video-container" style="border-bottom: 1px solid white">
     <video autoplay muted loop src="
       <%= cl_video_path video.video %>
     "></video>
   </div>
 </div>
   <% end %>
-
+</div>

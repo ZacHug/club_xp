@@ -2,7 +2,7 @@
 <div class="center-img" style="background-image: url('<%= @club.photo %>')"></div>
 <%# cl_image_tag @club.photo , class: "center-img", crop: :fill %>
 <div id='club-header'>
-  <h1 class="padding-show-h1 text-white padding-left"><strong><%= @club.name  %></strong></h1>
+  <h3 class="padding-show-h1 text-white padding-left"><strong><%= @club.name %></strong></h3>
   <div class="club-rating">
     <% 4.times do %>
       <%= image_tag 'clubxp-fire.svg'%>
@@ -16,14 +16,13 @@
 <div id="map" style="width: 100vw; height: 240px; display: none;" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
 
 </div>
-<div class="text-gold padding-left">
+<div>
   <ul class="nav nav-tabs">
     <li class="active"><a href="#comments" data-toggle="tab">live feed</a></li>
     <li><a href="#videos" data-toggle="tab">streams</a></li>
     <li><a href="#description" data-toggle="tab">details</a></li>
   </ul>
   <div class="tab-content">
-
 
     <div class="tab-pane fade in active"  id="comments">
       <%= render "form" , club: @club, comment: @comment%>
