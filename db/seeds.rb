@@ -23,7 +23,7 @@ puts "User"
 
 # Users ---> Teachers and TAs
 mg = User.create!(
-  first_name: "Marie-G",
+  first_name: "Marie",
   last_name: "Ayoub",
   email: "mg@gmail.com",
   password: "123456",
@@ -65,13 +65,6 @@ tim = User.create!(
   password: "123456",
   remote_photo_url: "https://media.licdn.com/dms/image/C4D03AQGkR61Um2wN7g/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=zAr17U9SCK3Z_xW7C6Tue-XGW_FmdX3qNKPdhAWYyKw"
   )
-# User.create!(
-#   first_name: "",
-#   last_name: "",
-#   email: "",
-#   password: "",
-#   remote_photo_url: ""
-#   )
 puts "done User"
 
 require 'faker'
@@ -96,7 +89,7 @@ puts "Creating Club"
 club1 = Club.create!(
     name: "BLVD44",
     address: "2108 Blvd St-Laurent, Montreal",
-    remote_photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRblYbXP06x8Hfzzg6YQ5xmR9IVChDS9Vy2QnzGxScCWe1pTJv4",
+    remote_photo_url: "https://encrypted-tbn0.gstatic.com/7images?q=tbn:ANd9GcRblYbXP06x8Hfzzg6YQ5xmR9IVChDS9Vy2QnzGxScCWe1pTJv4",
     description: " Located inside Hotel10, Blvd44 is a popular Montreal nightclub with three distinct sections (main room, mezzanine and terrace), each offering its own unique atmosphere to please everyone. A spacious dance floor and numerous VIP booth await you at Blvd44, a popular and casual nightclub where you can socialize and have a drink with friends in private.",
     price: 20,
     postalcode: ", QC H2X 2T2"
@@ -193,7 +186,6 @@ club10 = Club.create!(
 club11 = Club.create!(
     name: "Le Wagon",
     address: "5333 Avenue Casgrain",
-    #Find a new photo for Le Wagon Logo
     remote_photo_url: "https://cdn-images-1.medium.com/max/1600/1*MNAbkCk1IgeC5NLPa0d-NQ.jpeg",
     description: "Come experince Le Wagon nightclub, cozy-vibe with live acts and DJs",
     price: 20,
@@ -203,27 +195,27 @@ puts "Club done"
 
 
 puts "Creating videos"
-Video.create!(
-  club: club1,
-  user: User.first,
-  video: File.open("db/videos/01BLVD44.mp4")
-)
+# Video.create!(
+#   club: club1,
+#   user: User.first,
+#   video: File.open("db/videos/01BLVD44.mp4")
+# )
 
 Video.create!(
-  club: club1,
+  club: club10,
   user: User.first,
   video: File.open("db/videos/02APT200.mp4")
 
 )
 
 Video.create!(
-  club: club1,
+  club: club10,
   user: User.first,
   video: File.open("db/videos/03MUZ.mp4")
 )
 
 Video.create!(
-  club: club1,
+  club: club10,
   user: User.first,
   video: File.open("db/videos/04SAH.mp4")
 )
@@ -324,7 +316,7 @@ puts "Done adding favorites to wilson"
 puts ""
 
 OTHER_CLUBS = [club2, club3, club4, club5, club6, club7, club8, club9, club10]
-OTHER_USERS = User.where.not("first_name = ? OR first_name = ?", "Wilson", "Ryan")
+OTHER_USERS = User.where.not(first_name:["Wilson", "Ryan", "Martin", "Antoine", "Stephane", "Aline", "Marie-G", "Timothée*"])
 COMMENTS = [
   "Amazing right now!",
   "It's lit!!!",
@@ -351,91 +343,3 @@ OTHER_CLUBS.each do |club|
     })
   end
 end
-
-
-# puts "making 1 admission"
-
-# puts "done making admmsion"
-
-# club1 = Club.create!(
-#     name: "BLVD44",
-#     address: "2108 Blvd St-Laurent Montreal, QC H2X 2T2",
-#     remote_photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRblYbXP06x8Hfzzg6YQ5xmR9IVChDS9Vy2QnzGxScCWe1pTJv4",
-#     description: " Located inside Hotel10, Blvd44 is a popular Montreal nightclub with three distinct sections (main room, mezzanine and terrace), each offering its own unique atmosphere to please everyone. A spacious dance floor and numerous VIP booth await you at Blvd44, a popular and casual nightclub where you can socialize and have a drink with friends in private.",
-#     price: 20
-#   )
-
-# club2 = Club.create!(
-#     name: "Apartment 200",
-#     address: "3643 St Laurent Blvd, Montreal, QC H2X 2V5",
-#     remote_photo_url: "https://images.unsplash.com/photo-1541057591728-77510a9ea77f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
-#     description: "Buzzy, brick-lined bar with hip, vintage decor, a pool table & arcade games, plus bottle service.",
-#     price: 20
-#   )
-
-# club3 = Club.create!(
-#     name: "Muzique",
-#     address: "3781 St Laurent Blvd, Montreal, QC H2W 1X8",
-#     remote_photo_url: "https://www.theplunge.com/wp-content/uploads/2017/07/travel_bachelor_party_montreal_best_nightclubs_stereo.jpg",
-#     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
-#     price: 20
-#   )
-
-# club4 = Club.create!(
-#     name: "Stereo After Hours",
-#     address: "858 St Catherine St E, Montreal, QC H2L 2E3",
-#     remote_photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/06/f2/de/e8/stereo-nightclub.jpg",
-#     description: "Stereo nightclub is an afterhours club in Montreal, Quebec, Canada which primarily features house music and techno. The afterhours section of the club is always open on Fridays and Saturdays. Stereo nightclub was created by DJ/producer Angel Moraes and later co-owned by Tommy Piscardeli.",
-#     price: 20
-#   )
-
-# club5 = Club.create!(
-#     name: "Club École Privée",
-#     address: "3500 St Laurent Blvd, Montreal, QC H2X 2V2",
-#     remote_photo_url: "https://montrealx.com/wp-content/uploads/2017/06/best-top-newest-montreal-nightclubs-rooftop-bar-Somwhr-Liquor-Lounge-2017-Club-Ecole-Privee.jpg",
-#     description: "Dimly-lit nightspot with a classy, lounge vibe, featuring house dance music, DJs & bottle service.",
-#     price: 20
-#   )
-
-# club6 = Club.create!(
-#     name: "Mme Lee",
-#     address: "151 Ontario St E, Montreal, QC H2X 1H5",
-#     remote_photo_url: "https://lh4.googleusercontent.com/proxy/TemLhSEOrKdm3WYxt6apiFMSfqwaexu0ShxObPeXaFtGBssP1QoOcthntpimXJtM4DTqRuxuY4Ho5mYb_mUBBPkhq6eBLLxeDnYYwfrUZiiyw8686uhvHcTYMpYEFBvIIQ2XMdtKT9NAjOmzfGqoUAD2aXCT7Co=w99-h99-n-k-no",
-#     description: "Cosmopolitan nightspot with music & bottle service in a sophisticated atmosphere.",
-#     price: 20
-#   )
-
-# club7 = Club.create!(
-#     name: "IVY Nightclub",
-#     address: " 3556 St Laurent Blvd, Montreal, QC H2X 2V1",
-#     remote_photo_url: "http://www.barmontreal.com/wp-content/themes/corporate/images/tmp/ivy/ivypic.jpg",
-#     description: "Vibrant, over-18 nightspot open weekends only & featuring DJs, dancing & bars serving drinks.",
-#     price: 20
-#   )
-
-# club8 = Club.create!(
-#     name: "Balattou Club",
-#     address: "4372 St Laurent Blvd, Montreal, QC H2W 1Z5",
-#     remote_photo_url: "http://balattou.com/wp-content/uploads/2014/02/slider14-900x350.jpg",
-#     description: "Cozy nightspot with live world-beats performances & visiting DJs on weekend nights.",
-#     price: 20
-#   )
-
-# club9 = Club.create!(
-#     name: "Le Belmont",
-#     address: "4483 St Laurent Blvd, Montreal, QC H2W 1Z8",
-#     remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
-#     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
-#     price: 20
-#   )
-
-# club10 = Club.create!(
-#     name: "Le Salon Daomé",
-#     address: "4465 St Laurent Blvd, Montreal, QC H2W 1Z8",
-#     remote_photo_url: "http://boulevardsaintlaurent.com/custom-content/uploads/2018/05/SalonDaome-Cover1.png",
-#     description: "Laid-back nightclub with a roster of international DJs spinning electronic music, plus theme nights.",
-#     price: 20
-#   )
-
-
-
