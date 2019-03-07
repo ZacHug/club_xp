@@ -4,6 +4,7 @@ Comment.destroy_all
 ClubGenre.destroy_all
 
 puts "User"
+# Fictional Users
  User.create!(
   first_name: "Wilson",
   last_name: "Jackson",
@@ -20,24 +21,78 @@ puts "User"
   remote_photo_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Kyrie_Irving_June_2016_crop.jpg/270px-Kyrie_Irving_June_2016_crop.jpg"
   )
 
+# Users ---> Teachers and TAs
+mg = User.create!(
+  first_name: "Marie-G",
+  last_name: "Ayoub",
+  email: "mg@gmail.com",
+  password: "123456",
+  remote_photo_url: "https://media.licdn.com/dms/image/C4E03AQFxPwAmRwL7lA/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=hf71CAbm91JU75kltb9orYdtKKLg2JVbcs2nnGZwfyI"
+  )
+antoine = User.create!(
+  first_name: "Antoine",
+  last_name: "Ayoub",
+  email: "antoine@gmail.com",
+  password: "123456",
+  remote_photo_url: "https://media.licdn.com/dms/image/C4E03AQGWiRSEcRMCbw/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=jjmAmkLHF9Zs1OhoCugPh-Gm3wf9ldq6ImkeRWZFlp8"
+  )
+
+aline = User.create!(
+  first_name: "Aline",
+  last_name: "Gasparindo",
+  email: "aline@gmail.com",
+  password: "123456",
+  remote_photo_url: "https://media.licdn.com/dms/image/C4E03AQF7F1HsYdY1Cg/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=XA3RqyOVxYxQJCPTMkpBdJv6dEOafwyCkkyjJ4l04qI"
+  )
+martin = User.create!(
+  first_name: "Martin",
+  last_name: "Giannakopoulos",
+  email: "martin@gmail.com",
+  password: "123456",
+  remote_photo_url: "https://media.licdn.com/dms/image/C5603AQFbrmf9dn71Eg/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=J7nD-nwSoP0IYieHyHQWfaGEtjU87LFoMoitjrPdN7U"
+  )
+stephane = User.create!(
+  first_name: "Stephane",
+  last_name: "Lafontaine",
+  email: "stephane@gmail.com",
+  password: "1234565",
+  remote_photo_url: "https://media.licdn.com/dms/image/C5603AQGz8F1hD4Llmg/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=VZccHUxAvhUaxlhC1ubW7f-jpEor7nXVQW-ndjdxry4"
+  )
+tim = User.create!(
+  first_name: "Timothée",
+  last_name: "Clain",
+  email: "tim@gmail.com",
+  password: "123456",
+  remote_photo_url: "https://media.licdn.com/dms/image/C4D03AQGkR61Um2wN7g/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=zAr17U9SCK3Z_xW7C6Tue-XGW_FmdX3qNKPdhAWYyKw"
+  )
+# User.create!(
+#   first_name: "",
+#   last_name: "",
+#   email: "",
+#   password: "",
+#   remote_photo_url: ""
+#   )
 puts "done User"
 
 require 'faker'
 
 puts 'Creating 10 fake user...'
+number = 50
 10.times do
   user = User.new(
     first_name: Faker::Name.name,
     last_name: Faker::Name.name,
     email: Faker::Internet.email,
-    password: "123456"
+    password:"123456",
+    remote_photo_url: "https://randomuser.me/api/portraits/men/#{number}.jpg"
   )
+  number += 1
   user.save!
 end
 puts 'Finished!'
 
-puts "Creating Club"
 
+puts "Creating Club"
 club1 = Club.create!(
     name: "BLVD44",
     address: "2108 Blvd St-Laurent, Montreal",
@@ -60,7 +115,7 @@ club3 = Club.create!(
     name: "Muzique",
     address: "3781 Blvd St Laurent, Montreal",
 
-    
+
     remote_photo_url: "https://images1.miaminewtimes.com/imager/u/745xauto/9303092/rockwell_interior2_2_.jpeg",
 
     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
@@ -116,7 +171,7 @@ club8 = Club.create!(
 club9 = Club.create!(
     name: "Le Belmont",
 
-  
+
 
     address: "4483 Blvd St Laurent, Montreal",
 
@@ -135,13 +190,19 @@ club10 = Club.create!(
     postalcode: ", QC H2W 1Z8"
   )
 
-
-
+club11 = Club.create!(
+    name: "Le Wagon",
+    address: "5333 Avenue Casgrain",
+    #Find a new photo for Le Wagon Logo
+    remote_photo_url: "https://cdn-images-1.medium.com/max/1600/1*MNAbkCk1IgeC5NLPa0d-NQ.jpeg",
+    description: "Come experince Le Wagon nightclub, cozy-vibe with live acts and DJs",
+    price: 20,
+    postalcode: ",QC  H2T 1X3"
+  )
 puts "Club done"
 
 
 puts "Creating videos"
-
 Video.create!(
   club: club1,
   user: User.first,
@@ -167,8 +228,8 @@ Video.create!(
   video: File.open("db/videos/04SAH.mp4")
 )
 
-puts "creating Comment"
 
+puts "creating Comment"
 Comment.create!(
   content: "This club is LIT!!!! !",
   club: club1,
@@ -204,6 +265,42 @@ Comment.create!(
   club: club1,
   user: User.first
   )
+# Le Wagon Comments
+Comment.create!(
+  content: "Le Wagon  is the best!!!" ,
+  club: club11 ,
+  user: mg
+  )
+Comment.create!(
+  content: "Found Le Wagon because of Club XP" ,
+  club: club11,
+  user:antoine
+  )
+Comment.create!(
+  content: "DJs know how play a great set" ,
+  club: club11,
+  user: aline
+  )
+Comment.create!(
+  content: "10/10 would definately come back" ,
+  club: club11,
+  user: martin
+  )
+Comment.create!(
+  content: "I'm invinting all my friends next time, tonight was fantastic!" ,
+  club: club11,
+  user: stephane
+  )
+Comment.create!(
+  content: "I flew from New York for this glad I came thank you Club XP" ,
+  club: club11,
+  user: tim
+  )
+# Comment.create!(
+#   content: "" ,
+#   club11: ,
+#   user:
+#   )
 puts " done comment"
 
 puts "adding music genre to a club"
@@ -222,6 +319,39 @@ Favorite.create!(user: User.first , club: club3)
 
 
 puts "Done adding favorites to wilson"
+
+
+puts ""
+
+OTHER_CLUBS = [club2, club3, club4, club5, club6, club7, club8, club9, club10]
+OTHER_USERS = User.where.not("first_name = ? OR first_name = ?", "Wilson", "Ryan")
+COMMENTS = [
+  "Amazing right now!",
+  "It's lit!!!",
+  "Thanks Club XP!!",
+  "Tell your friends about Club XP!",
+  "I won't forget this night all thanks to Club XP",
+  "Music is on point :D",
+  "DJs know how to keep a party going",
+  "Club XP knows how to find promoters",
+  "Very cool space, young music #goodvibes ",
+  "Best club in montreal with its own vibe",
+  "Great staff and drinks",
+  "BEST PARTY PLACE EVER IF YOU VISIT MONTREAL",
+  "A perfect cozy bar with good music and atmosphere.",
+  "Always a good vibe there"
+  ]
+
+OTHER_CLUBS.each do |club|
+  OTHER_USERS.each do |user|
+    Comment.create({
+      user: user,
+      club: club,
+      content: COMMENTS.sample
+    })
+  end
+end
+
 
 # puts "making 1 admission"
 
