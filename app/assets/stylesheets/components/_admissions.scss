@@ -66,10 +66,6 @@
   border-bottom: 1px solid white;
 }
 
-.total-line {
-
-}
-
 .summary-container {
   display: flex;
   justify-content: space-between;
@@ -89,4 +85,9 @@
   font-size: 28px;
 }
 
+.date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

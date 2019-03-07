@@ -23,6 +23,5 @@ skip_before_action :authenticate_user!
     if user_signed_in?
       @favorite_club = current_user.favorites.find_by(club_id: @club.id)
     end
-
   end
 end

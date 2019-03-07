@@ -6,21 +6,21 @@
 
         <div id="club<%= club.id %>" class="club-card border-bottom <%= 'enlarge' if index == 0 %>"
           style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)),
-               url('<%= cl_image_path club.photo, crop: :fill %>')">
+
+               url('<%= cl_image_path club.photo, crop: :fill %>')" >
 
           <%= link_to club_path(club.id) do %>
 
-          <h2><%= club.name %></h2>
-
-
-
-
-
-          <% if @coordinates.nil? %>
-            <span> <%= (Geocoder::Calculations.distance_between([params[:lat].to_f,params[:lng].to_f], club.geocode)).round(1)  %> KM</span>
-          <% elsif !@coordinates.nil? %>
-            <span> <%= (Geocoder::Calculations.distance_between(@coordinates, club.geocode)).round(1)  %> KM</span>
-          <% end %>
+            <h1><%= club.name %></h1>
+            <% if @coordinates.nil? %>
+              <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between([params[:lat].to_f,params[:lng].to_f], club.geocode)).round(1)  %></strong> KM</span>
+            <% elsif !@coordinates.nil? %>
+              <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between(@coordinates, club.geocode)).round(1)  %> KM </strong></span>
+            <% end %>
+            <span style="font-size: 32px"><% club.hotness.times do %>
+              <%= image_tag 'clubxp-fire.svg'%>
+              <% end %>
+            </span>
 
           <% end %>
         </div>

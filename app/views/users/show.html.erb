@@ -3,14 +3,15 @@
     <%= cl_image_tag @user.photo ,  height: 100, width: 100, crop: :thumb ,class: "img-circle" %>
   </div>
   <div class="user-info">
-    <h2><%= @user.name_string %></h2>
-    <%= link_to "logout", destroy_user_session_path, method: :delete%>
+    <h2 class="text-gold"><%= @user.name_string %></h2>
 
+    <div class="log-out-btn-container">
+      <%= link_to "logout", destroy_user_session_path, method: :delete, class: "log-out-btn"%>
+    </div>
   </div>
 </div>
 
 <br>
-
 
   <ul class="nav nav-tabs">
     <li class="active"><a href="#favorites" data-toggle="tab">favorites</a></li>

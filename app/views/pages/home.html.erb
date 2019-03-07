@@ -6,7 +6,7 @@
 
 
     <!-- image of logo -->
-    <%= image_tag 'clubxp.jpg' %>
+    <%= image_tag 'clubxp2.png' %>
 </div>
 <div id="homepage-cta">
 
@@ -14,12 +14,13 @@
     <h2>See What's Happening Live...</h2>
   </div>
 
-
   <div class="search-box">
     <form class="example" action="/clubs">
       <input type="text" placeholder="...what city are you in?" name="address">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
-
   </div>
+  <br>
+  <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-club_xp-item navbar-club_xp-link log-in-btn" %>
+  <%= link_to t(".sign_in", default: "Sign-Up?"), new_user_registration_path, class: "navbar-club_xp-item navbar-club_xp-link log-in-btn" %>
 </div>
