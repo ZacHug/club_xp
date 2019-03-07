@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_05_212038) do
-
+ActiveRecord::Schema.define(version: 2019_03_07_154429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +26,7 @@ ActiveRecord::Schema.define(version: 2019_03_05_212038) do
     t.integer "amount_cents", default: 0, null: false
     t.jsonb "payment"
     t.integer "customers"
+    t.string "qr"
     t.index ["club_id"], name: "index_admissions_on_club_id"
     t.index ["table_id"], name: "index_admissions_on_table_id"
     t.index ["user_id"], name: "index_admissions_on_user_id"
