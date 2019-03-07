@@ -13,7 +13,6 @@
     <% if (controller_name === "clubs" && action_name === "show") || (controller_name === "admissions" ) %>
       <% profile_class = "footer-icons" %>
       <% profile_class += " text-gold" if controller_name == "admissions" %>
-
       <%= link_to new_club_admission_path([@club, @admission]), :id => "admission-icon", :class => profile_class do %>
       <i class="fas fa-credit-card"></i>
       <% end %>
