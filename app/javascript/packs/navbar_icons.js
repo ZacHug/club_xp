@@ -10,10 +10,13 @@ if (dropbtn) {
   dropbtn.addEventListener("click", (event) => {
     if (!dropbtn.classList.contains("text-gold")) {
       dropbtn.classList.add("text-gold");
+      $('#dropDownFilters').slideDown(400);
 
-      setTimeout(() => {
-        document.querySelector(".dropdown-backdrop").addEventListener("click", removeTextGold);
-      });
+    } else {
+      $('#dropDownFilters').slideUp();
+      dropbtn.classList.remove("text-gold");
+
+
     }
   });
 }

@@ -3,7 +3,9 @@ skip_before_action :authenticate_user!
 
   def index
     if params[:address].present?
-      @clubs = Club.near(params[:address])
+      address = Geocoder.search(params[:address])
+      @clubs = Club.near(address.first.coordinates)
+      @coordinates = address.first.coordinates
     elsif params[:lat].present? && params[:lng].present?
       @clubs = Club.near([params[:lat], params[:lng]])
     else

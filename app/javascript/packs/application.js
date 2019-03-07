@@ -27,3 +27,4 @@ if (open_map && close_map) {
     $("#map").slideUp(400)
   });
 }
+
