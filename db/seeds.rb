@@ -59,7 +59,7 @@ club2 = Club.create!(
 club3 = Club.create!(
     name: "Muzique",
     address: "3781 St Laurent Blvd, Montreal",
-    remote_photo_url: "https://www.theplunge.com/wp-content/uploads/2017/07/travel_bachelor_party_montreal_best_nightclubs_stereo.jpg",
+    remote_photo_url: "https://images1.miaminewtimes.com/imager/u/745xauto/9303092/rockwell_interior2_2_.jpeg",
     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
     price: 15,
     postalcode: ", QC H2W 1X8"

@@ -2,7 +2,8 @@
 <br>
 <h4  class="text-white margin-15px-left" style="font-size: 32px"><strong><%= @club.name %></strong></h4>
 <br>
-<h5 class="text-gold margin-15px-left"><strong>Details</strong></h5>
+<h5 class="text-gold margin-15px-left"><strong>Details:</strong></h5>
+<br>
 <ul class="text-white margin-15px-left">
   <li><strong>Must be at least 21 years of age</strong></li>
   <br>
@@ -43,7 +44,7 @@
   <%= form_tag admissions_path do %>
   <%= hidden_field_tag 'club_id', @club.id %>
   <%= hidden_field_tag 'admit_cnt', 1 %>
-  <%= submit_tag 'PAY', class: 'pay-btn' %>
+  <%= submit_tag 'ADMIT', class: 'pay-btn' %>
   <% end %>
 </div>
 

@@ -7,7 +7,10 @@
   display: flex;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-
+  // padding: 50px;
+  // margin-bottom: 20px;
+  opacity: 0.6;
+  transition: all .2s ease-in-out;
   a{
     display: flex;
     justify-content: center;
@@ -20,3 +23,9 @@
 
 }
 
+.enlarge {
+  // transform: scale(1.4);
+  // padding:0px;
+  // margin: 0px;
+  opacity: 1;
+}

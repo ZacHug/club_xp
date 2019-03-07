@@ -1,5 +1,5 @@
 import "bootstrap";
-// import "footer_icons";
+import "./navbar_icons";
 import 'mapbox-gl/dist/mapbox-gl.css'; // <-- you need to uncomment the stylesheet_pack_tag in the layout!
 
 import { initMapbox } from '../plugins/init_mapbox';
@@ -27,8 +27,3 @@ if (open_map && close_map) {
     $("#map").slideUp(400)
   });
 }
-
-navigator.geolocation.getCurrentPosition((position) => {
-  const distanceLink = document.querySelector("#sort-by-distance");
-  distanceLink.href = `/clubs?lat=${position.coords.latitude}&lng=${position.coords.longitude}`
-});
