@@ -13,10 +13,11 @@
   </div>
   <br>
   <div class="payment-summary-containter">
-    <span class="text-gold margin-15px-left" style="margin-bottom: 15px">DATE   :</span>
-    <span class="text-white "><%= @admission.created_at.strftime("%b %d, %Y") %></span>
-
     <p class="text-gold margin-15px-left" >summary</p>
+    <div class="date-container"></div>
+      <span class="text-gold margin-15px-left" style="margin-bottom: 15px">DATE   :</span>
+      <span class="text-white "><%= @admission.created_at.strftime("%b %d, %Y") %></span>
+    </div>
     <div class="line"></div>
   </div>
 

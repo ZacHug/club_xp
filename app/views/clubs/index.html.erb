@@ -16,9 +16,12 @@
             <% elsif !@coordinates.nil? %>
               <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between(@coordinates, club.geocode)).round(1)  %> KM </strong></span>
             <% end %>
+            <span style="font-size: 32px"><% club.hotness.times do %>
+              <%= image_tag 'clubxp-fire.svg'%>
+              <% end %>
+            </span>
 
-            <% end %>
-
+          <% end %>
         </div>
 
       <% end %>
