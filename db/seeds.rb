@@ -179,6 +179,7 @@ club8 = Club.create!(
 club9 = Club.create!(
     name: "Le Belmont",
 
+
     address: "4483 Blvd St Laurent, Montreal",
     remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
@@ -314,7 +315,24 @@ puts "adding music genre to a club"
 
 ClubGenre.create!( name: "Hip-Hop" , club: club1)
 ClubGenre.create!( name: "Dancehall" , club: club1)
-
+ClubGenre.create!( name: "Hip-Hop" , club: club2)
+ClubGenre.create!( name: "Dancehall" , club: club2)
+ClubGenre.create!( name: "Hip-Hop" , club: club3)
+ClubGenre.create!( name: "Dancehall" , club: club3)
+ClubGenre.create!( name: "Hip-Hop" , club: club4)
+ClubGenre.create!( name: "Dancehall" , club: club4)
+ClubGenre.create!( name: "Hip-Hop" , club: club5)
+ClubGenre.create!( name: "Dancehall" , club: club5)
+ClubGenre.create!( name: "Hip-Hop" , club: club6)
+ClubGenre.create!( name: "Dancehall" , club: club6)
+ClubGenre.create!( name: "Hip-Hop" , club: club7)
+ClubGenre.create!( name: "Dancehall" , club: club7)
+ClubGenre.create!( name: "Hip-Hop" , club: club8)
+ClubGenre.create!( name: "Dancehall" , club: club8)
+ClubGenre.create!( name: "Hip-Hop" , club: club9)
+ClubGenre.create!( name: "Dancehall" , club: club9)
+ClubGenre.create!( name: "Hip-Hop" , club: club10)
+ClubGenre.create!( name: "Dancehall" , club: club10)
 
 puts "done"
 
