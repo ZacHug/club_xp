@@ -1,7 +1,8 @@
+<br>
 <div class="profile-fav-container" style="margin-bottom: 80px">
 <% @user.favorites.each do |favorite| %>
 <div>
-  <div class="center-img club-card" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('<%= favorite.club.photo %>')">
+  <div class="center-img club-card-favs" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('<%= favorite.club.photo %>')">
     <%= link_to club_path(favorite.club.id) do %>
 
     <h2><%= favorite.club.name %></h2>

@@ -26,3 +26,26 @@
 .enlarge {
   opacity: 1;
 }
+
+.club-card-favs {
+  height: 300px;
+  max-width: 100%;
+  background-size: cover;
+  padding-left: 15px;
+  display: flex;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  // padding: 50px;
+  // margin-bottom: 20px;
+  opacity: 1;
+  transition: all .2s ease-in-out;
+  a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: lightgray;
+  }
+}

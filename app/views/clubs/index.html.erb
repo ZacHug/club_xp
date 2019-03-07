@@ -9,7 +9,7 @@
                url('<%= cl_image_path club.photo, crop: :fill %>')">
 
           <%= link_to club_path(club.id) do %>
-
+          .
           <h2><%= club.name %></h2>
           <% if @coordinates.nil? %>
             <span> <%= (Geocoder::Calculations.distance_between([params[:lat].to_f,params[:lng].to_f], club.geocode)).round(1)  %> KM</span>
