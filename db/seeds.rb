@@ -60,7 +60,7 @@ club3 = Club.create!(
     name: "Muzique",
     address: "3781 Blvd St Laurent, Montreal",
 
-    
+
     remote_photo_url: "https://images1.miaminewtimes.com/imager/u/745xauto/9303092/rockwell_interior2_2_.jpeg",
 
     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
@@ -116,7 +116,7 @@ club8 = Club.create!(
 club9 = Club.create!(
     name: "Le Belmont",
 
-  
+
 
     address: "4483 Blvd St Laurent, Montreal",
 
@@ -210,7 +210,24 @@ puts "adding music genre to a club"
 
 ClubGenre.create!( name: "Hip-Hop" , club: club1)
 ClubGenre.create!( name: "Dancehall" , club: club1)
-
+ClubGenre.create!( name: "Hip-Hop" , club: club2)
+ClubGenre.create!( name: "Dancehall" , club: club2)
+ClubGenre.create!( name: "Hip-Hop" , club: club3)
+ClubGenre.create!( name: "Dancehall" , club: club3)
+ClubGenre.create!( name: "Hip-Hop" , club: club4)
+ClubGenre.create!( name: "Dancehall" , club: club4)
+ClubGenre.create!( name: "Hip-Hop" , club: club5)
+ClubGenre.create!( name: "Dancehall" , club: club5)
+ClubGenre.create!( name: "Hip-Hop" , club: club6)
+ClubGenre.create!( name: "Dancehall" , club: club6)
+ClubGenre.create!( name: "Hip-Hop" , club: club7)
+ClubGenre.create!( name: "Dancehall" , club: club7)
+ClubGenre.create!( name: "Hip-Hop" , club: club8)
+ClubGenre.create!( name: "Dancehall" , club: club8)
+ClubGenre.create!( name: "Hip-Hop" , club: club9)
+ClubGenre.create!( name: "Dancehall" , club: club9)
+ClubGenre.create!( name: "Hip-Hop" , club: club10)
+ClubGenre.create!( name: "Dancehall" , club: club10)
 
 puts "done"
 
