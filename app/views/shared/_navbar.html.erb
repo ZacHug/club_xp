@@ -9,8 +9,6 @@
 
     <% if user_signed_in? %>
 
-
-
       <!-- Avatar with dropdown menu -->
       <div class="navbar-club_xp-item">
         <div class="dropdown">
@@ -53,16 +51,17 @@
       <%= f.submit "Favs", :type => :image, :src => image_path("dislike.svg"), :class =>"show-flaticon" %>
      <% end %>
     <% end %>
-  <%else%>
-
+  <% elsif controller_name == "clubs" && action_name == "index"%>
     <div class="navbar-club_xp-item hidden-md hidden-lg">
       <div class="dropdown">
-        <i data-toggle="dropdown" class="text-white dwn-btn"><i class="fas fa-caret-down"></i></i></i></i>
-        <ul class="dropdown-menu dropdown-menu-right navbar-club_xp-dropdown-menu">
-          <li><a href="#">recommended for you</a></li>
-          <li><a id="sort-by-distance" href="#">distance</a></li>
-          <li><a href="#">rating</a></li>
-          <li><a href="#">most popular</a></li>
+<!--         <i data-toggle="dropdown"class="text-white dwn-btn"><i id="drop-dwn-btn" class="fas fa-caret-down"></i></i></i> -->
+        <i class="text-white dwn-btn"><i id="drop-dwn-btn" class="fas fa-caret-down"></i></i></i>
+
+        <ul class="dropdown-menu dropdown-menu-right navbar-club_xp-dropdown-menu" id="dropDownFilters" style="background-color: #04142C; display: none;">
+          <li class="text-white" style="padding-left: 10px">SORT BY:</li>
+          <li><a id="sort-by-distance" href="#">Near Me</a></li>
+          <li><a href="#">Ratings</a></li>
+          <li><a href="#">Hotness</a></li>
         </ul>
       </div>
     </div>
