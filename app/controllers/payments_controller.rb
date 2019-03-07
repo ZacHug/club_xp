@@ -2,7 +2,6 @@ class PaymentsController < ApplicationController
   before_action :set_admission
 
   def new
-    # binding.pry
   end
 
   def create
@@ -10,7 +9,7 @@ class PaymentsController < ApplicationController
         source: params[:stripeToken],
         email:  params[:stripeEmail]
       )
-    # binding.pry
+
 
       charge = Stripe::Charge.create(
         customer:     customer.id,   # You should store this customer id and re-use it.

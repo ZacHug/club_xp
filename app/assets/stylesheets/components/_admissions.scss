@@ -54,14 +54,14 @@
 }
 
 .hide-stripe-btn-container {
-  // display: none;
+  display: none;
   position: fixed;
   top: 50vh;
 }
 
 
 .line {
-  margin-left: 15px;
+  margin: 15px;
   width: 93vw;
   border-bottom: 1px solid white;
 }
@@ -69,13 +69,6 @@
 .total-line {
 
 }
-
-// .confirm-entrance-container {
-
-//   align-content: center;
-//   width: 92vw;
-//   flex-direction: column;
-// }
 
 .summary-container {
   display: flex;

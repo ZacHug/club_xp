@@ -19,3 +19,16 @@ td.black { border-color: #000; }
 td.white { border-color: #fff; }
 
 }
+
+.qrcode-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+.text-blue {
+  color: $darkblue
+}
+
+

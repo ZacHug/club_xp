@@ -13,23 +13,25 @@
   </div>
   <br>
   <div class="payment-summary-containter">
+    <span class="text-gold margin-15px-left" style="margin-bottom: 15px">DATE   :</span>
+    <span class="text-white "><%= @admission.created_at.strftime("%b %d, %Y") %></span>
+
     <p class="text-gold margin-15px-left" >summary</p>
     <div class="line"></div>
   </div>
 
   <div class="pay-with-card-btn-container">
-    <%= form_tag admission_payments_path(@admission) do %>
       <br>
       <label class="amount text-gold" style="font-size: 24px">
         <div class="confirm-entrance-container">
+        <br>
           <ul class="summary-container">
-
-            <span class="text-gold">ENTRANCE FEE   :</span>
+            <li class="text-gold">ENTRANCE FEE   :</li>
             <span class="text-white"><%= humanized_money_with_symbol(@admission.club.price) %></span>
           </ul>
 
           <ul class="summary-container">
-            <span class="text-gold">ADMITING    :</span>
+            <li class="text-gold">ADMITING    :</li>
             <span class="text-white"><%= @admission.customers %></span>
           </ul>
         </div>
@@ -43,24 +45,25 @@
       <span class="text-gold" style="padding-right: 15px"><strong>Total    :</strong></span>
       <span class="text-white"><strong>$<%= @admission.amount %></strong></span>
     </div>
-    <!-- <br> -->
-    <!-- <br> -->
-    <!-- <br> -->
-    <div class="confirmation-pay-btn-container">
-      <button id="fake-stripe-btn" class="pay-btn">hhhhh</button>
+    <br>
+    <br>
+    <br>
+    <div class="confirmation-pay-btn-container" style="margin-bottom: 100px">
+      <button id="fake-stripe-btn" class="pay-btn">PAY NOW</button>
     </div>
 
+    <%= form_tag admission_payments_path(@admission) do %>
     <div class="hide-stripe-btn-container">
       <script src="https://checkout.stripe.com/checkout.js" class="stripe-button margin-15px-left"
         data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-        data-name="My Payment"
+        data-name="Payment"
         data-email="<%= current_user.email %>"
         data-description="Club <%= @admission.club.name %>"
         data-amount="<%= @admission.amount_cents %>"
         data-currency="<%= @admission.amount.currency %>">
       </script>
     </div>
-  <% end %>
+   <% end %>
   </div>
       <script>
 
