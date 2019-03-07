@@ -59,7 +59,10 @@ club2 = Club.create!(
 club3 = Club.create!(
     name: "Muzique",
     address: "3781 Blvd St Laurent, Montreal",
+
+    
     remote_photo_url: "https://images1.miaminewtimes.com/imager/u/745xauto/9303092/rockwell_interior2_2_.jpeg",
+
     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
     price: 15,
     postalcode: ", QC H2W 1X8"
@@ -112,7 +115,11 @@ club8 = Club.create!(
 
 club9 = Club.create!(
     name: "Le Belmont",
+
+  
+
     address: "4483 Blvd St Laurent, Montreal",
+
     remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
     price: 20,
