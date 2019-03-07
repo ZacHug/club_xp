@@ -10,6 +10,7 @@ class PaymentsController < ApplicationController
         email:  params[:stripeEmail]
       )
 
+
       charge = Stripe::Charge.create(
         customer:     customer.id,   # You should store this customer id and re-use it.
         amount:       @admission.amount_cents,

@@ -40,7 +40,7 @@ puts "Creating Club"
 
 club1 = Club.create!(
     name: "BLVD44",
-    address: "2108 Blvd St-Laurent Montreal",
+    address: "2108 Blvd St-Laurent, Montreal",
     remote_photo_url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRblYbXP06x8Hfzzg6YQ5xmR9IVChDS9Vy2QnzGxScCWe1pTJv4",
     description: " Located inside Hotel10, Blvd44 is a popular Montreal nightclub with three distinct sections (main room, mezzanine and terrace), each offering its own unique atmosphere to please everyone. A spacious dance floor and numerous VIP booth await you at Blvd44, a popular and casual nightclub where you can socialize and have a drink with friends in private.",
     price: 20,
@@ -59,7 +59,10 @@ club2 = Club.create!(
 club3 = Club.create!(
     name: "Muzique",
     address: "3781 Blvd St Laurent, Montreal",
-    remote_photo_url: "https://www.theplunge.com/wp-content/uploads/2017/07/travel_bachelor_party_montreal_best_nightclubs_stereo.jpg",
+
+    
+    remote_photo_url: "https://images1.miaminewtimes.com/imager/u/745xauto/9303092/rockwell_interior2_2_.jpeg",
+
     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
     price: 15,
     postalcode: ", QC H2W 1X8"
@@ -67,7 +70,7 @@ club3 = Club.create!(
 
 club4 = Club.create!(
     name: "Stereo After Hours",
-    address: "858 St Catherine St E, Montreal",
+    address: "858 St Catherine, Montreal",
     remote_photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/06/f2/de/e8/stereo-nightclub.jpg",
     description: "Stereo nightclub is an afterhours club in Montreal, Quebec, Canada which primarily features house music and techno. The afterhours section of the club is always open on Fridays and Saturdays. Stereo nightclub was created by DJ/producer Angel Moraes and later co-owned by Tommy Piscardeli.",
     price: 10,
@@ -85,7 +88,7 @@ club5 = Club.create!(
 
 club6 = Club.create!(
     name: "Mme Lee",
-    address: "151 Ontario St E, Montreal",
+    address: "151 St Ontario,  Montreal",
     remote_photo_url: "https://lh4.googleusercontent.com/proxy/TemLhSEOrKdm3WYxt6apiFMSfqwaexu0ShxObPeXaFtGBssP1QoOcthntpimXJtM4DTqRuxuY4Ho5mYb_mUBBPkhq6eBLLxeDnYYwfrUZiiyw8686uhvHcTYMpYEFBvIIQ2XMdtKT9NAjOmzfGqoUAD2aXCT7Co=w99-h99-n-k-no",
     description: "Cosmopolitan nightspot with music & bottle service in a sophisticated atmosphere.",
     price: 20,
@@ -112,7 +115,11 @@ club8 = Club.create!(
 
 club9 = Club.create!(
     name: "Le Belmont",
-    address: "4483  Blvd St Laurent, Montreal",
+
+  
+
+    address: "4483 Blvd St Laurent, Montreal",
+
     remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
     price: 20,
