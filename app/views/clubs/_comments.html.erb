@@ -1,25 +1,27 @@
 
-
-<div class="all-container" style="margin-bottom: 85px;">
+<div class="all-comments-container" style="margin-bottom: 85px;">
 
 <% @club.comments.order('created_at DESC').each do |comment| %>
 
  <div class="comment-container" >
-    <div class="flex-container-img">
 
-    <%= cl_image_tag comment.user.photo ,  height: 60, width: 60, crop: :thumb ,class: "img-circle" %>
+  <div class="flex-container-img">
+  <%= cl_image_tag comment.user.photo, height: 60, width: 60, crop: :thumb ,class: "img-circle" %>
 
     <div class="flex-container-content">
-
-      <h5 class="text-gold"><strong><%= comment.user.name_string %></strong></h5>
-      <p><%= comment.content %></p>
-    </div>
-    </div>
-
-    <div class="comment-time-container">
-      <span class="text-white"> <%= time_ago_in_words(comment.created_at) %> ago </span>
+      <div class="user-name text-gold">
+        <h6><strong><%= comment.user.name_string %></strong></h6>
+      </div>
+      <div class="comment text-white">
+        <h6><%= comment.content %></h6>
+      </div>
     </div>
   </div>
+
+  <div class="comment-time-container text-white">
+    <span> <%= time_ago_in_words(comment.created_at) %> ago </span>
+  </div>
+</div>
 <% end %>
 </div>
 

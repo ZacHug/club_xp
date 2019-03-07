@@ -45,3 +45,48 @@
   border-radius: 8px;
   border: none;
 }
+
+.pay-with-card-btn-container {
+  display:flex;
+  align-items: center;
+  margin-left: 15px;
+
+}
+
+.hide-stripe-btn-container {
+  display: none;
+  position: fixed;
+  top: 50vh;
+}
+
+
+.line {
+  margin: 15px;
+  width: 93vw;
+  border-bottom: 1px solid white;
+}
+
+.total-line {
+
+}
+
+.summary-container {
+  display: flex;
+  justify-content: space-between;
+  width: 92vw;
+}
+
+.confirmation-pay-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+  font-size: 28px;
+}
+
+

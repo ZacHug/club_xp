@@ -1,16 +1,15 @@
+<br>
+<span class="text-gold margin-15px-left">Location: </span><p class="text-white margin-15px-left" style="font-size: 16px"><%= @club.full_address %></p>
+<br>
+ <span class="text-gold margin-15px-left" style="font-size: 16px">Music: </span>
  <br>
-        <span class="text-gold margin-15px-left">Location: </span><p class="text-white margin-15px-left"><%= @club.full_address %></p>
-         <span class="text-gold margin-15px-left">Music: </span>
-         <br>
-        <% @club.club_genres.each do |genre| %>
-        <span class="text-white margin-15px-left">*<%= genre.name  %> </span>
+<% @club.club_genres.each do |genre| %>
+<span class="text-white margin-15px-left"style="font-size: 16px">-<%= genre.name %> </span>
 
-        <% end %>
-        <br>
-        <br>
+<% end %>
+<br>
+<br>
 
-        <span class="text-gold margin-15px-left" >Description: </span>
+<span class="text-gold margin-15px-left" style="font-size: 16px" >Description: </span>
 
-        <p class="text-white margin-15px-left"> <%= @club.description %></p>
-
-
+<p class="text-white margin-15px-left" style="font-size: 16px"> <%= @club.description %></p>

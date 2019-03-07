@@ -1,11 +1,11 @@
 /* Main navbar */
 .navbar-club_xp {
   // box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background: rgba(4, 20, 44, 0.6);
+  background: rgba(4, 20, 44, 0.4);
   position: fixed;
-  width: 100%;
+  width: 100vw;
   transition: all 0.3s ease;
-  height: 70px;
+  height: 43px;
   padding: 0px 30px;
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@ a {
 }
 
 .show-flaticon-like {
-  width: 40px;
+  width: 35px;
   margin-top: 10px;
   filter: invert(48%) sepia(100%) saturate(210%) hue-rotate(1075deg) brightness(118%) contrast(119%);}
 
@@ -69,47 +69,6 @@ a {
   text-decoration: none;
 }
 
-/* Dropdown menu */
-.navbar-club_xp-dropdown-menu {
-  margin-top: 15px;
-  box-shadow: 1px 1px 4px #E6E6E6;
-  border-color: #E6E6E6;
-}
-.navbar-club_xp-dropdown-menu li > a {
-  transition: color 0.3s ease;
-  font-weight: lighter !important;
-  color: #999999 !important;
-  font-size: 15px !important;
-  line-height: 22px !important;
-  padding: 10px 20px;
-}
-.navbar-club_xp-dropdown-menu li > a:hover {
-  background: transparent !important;
-  color: black !important;
-}
-.navbar-club_xp-dropdown-menu:before {
-  content: ' ';
-  height: 10px;
-  width: 10px;
-  position: absolute;
-  right: 10px;
-  top: -6px;
-  background-color: white;
-  transform: rotate(45deg);
-  border-left: 1px solid #E6E6E6;
-  border-top: 1px solid #E6E6E6;
-}
-// .navbar-club_xp{
-//  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-//  background: white;
-//  transition: all 0.3s ease;
-//  height: 70px;
-//  padding: 0px 30px;
-//  display: flex;
-//  align-items: center;
-//  justify-content: space-between;
-// }
-
 /* Logo */
 .navbar-club_xp-brand img {
  height: 50px;
@@ -147,15 +106,27 @@ a {
 
 /* Dropdown menu */
 .navbar-club_xp-dropdown-menu {
- margin-top: 15px;
- box-shadow: 1px 1px 4px #E6E6E6;
- border-color: #E6E6E6;
+  position: fixed;
+  top: 45px;
+  left: 0px;
+  opacity: 0.8;
+  min-width: 130px !important;
+  border-radius: 5px;
+
+
+  li {
+    border-bottom: 1px solid white;
+    padding: 10px;
+  }
 }
+
+/* Dropdown menu */
+
 .navbar-club_xp-dropdown-menu li > a {
  transition: color 0.3s ease;
  font-weight: lighter !important;
- color: #999999 !important;
- font-size: 15px !important;
+ color: #f7b633 !important;
+ font-size: 22px !important;
  line-height: 22px !important;
  padding: 10px 20px;
 }
@@ -163,15 +134,4 @@ a {
  background: transparent !important;
  color: black !important;
 }
-.navbar-club_xp-dropdown-menu:before {
- content: ' ';
- height: 10px;
- width: 10px;
- position: absolute;
- right: 10px;
- top: -6px;
- background-color: white;
- transform: rotate(45deg);
- border-left: 1px solid #E6E6E6;
- border-top: 1px solid #E6E6E6;
-}
+

@@ -1,0 +1,21 @@
+<% @user.admissions.each do |admission| %>
+  <% if admission.state == "paid" %>
+    <div class="text-gold">
+      <%= admission.state %>
+    <div class="qrcode" style="margin-bottom: 85px;">
+      <%= raw RQRCode::QRCode.new(admission.qr, size: 4, level: :h).as_html %>
+    </div>
+
+    </div>
+    <br>
+  <% end %>
+<% end %>
+
+
+
+
+
+
+
+
+<!-- the styling for this whole page is in the showpage_comps sorry -->

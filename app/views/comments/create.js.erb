@@ -4,7 +4,7 @@ function refreshForm(innerHTML) {
 }
 
 function addReview(commentHTML) {
-  const comments = document.getElementById('comments');
+  const comments = document.querySelector('.all-comments-container');
   comments.insertAdjacentHTML('afterbegin', commentHTML);
 }
 

@@ -1,3 +1,4 @@
+<% unless controller_name == "clubs" && action_name == "index" %>
 <div id="footer">
   <div class="footer-icons">
 
@@ -16,6 +17,7 @@
       <i class="fas fa-credit-card"></i>
       <% end %>
     <% end %>
+
   </div>
 
   <div class="footer-icons">
@@ -27,7 +29,6 @@
     <i class="fas fa-user-alt"></i>
     <% end %>
     <% end %>
-
   </div>
 </div>
-
+<% end %>

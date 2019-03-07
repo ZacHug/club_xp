@@ -2,15 +2,16 @@
 <br>
 <h4  class="text-white margin-15px-left" style="font-size: 32px"><strong><%= @club.name %></strong></h4>
 <br>
-<h5 class="text-gold margin-15px-left"><strong>Details</strong></h5>
+<h5 class="text-gold margin-15px-left"><strong>Details:</strong></h5>
+<br>
 <ul class="text-white margin-15px-left">
   <li><strong>Must be at least 21 years of age</strong></li>
   <br>
   <li><strong>Must have a VALID ID upon entrance</strong></li>
   <br>
-  <li><strong>Proper Attire will be strictly enforced</strong></li>
+  <li><strong>Proper attire will be strictly enforced</strong></li>
   <br>
-  <li><strong>Ladies enter and drink FREE until Midnight</strong></li>
+  <li><strong>Ladies enter and drink FREE until midnight</strong></li>
 </ul>
 <br>
 <br>
@@ -25,26 +26,70 @@
 </div>
 
 <div class="plus-minus-container">
-  <div class="plus-minus-btns">
+  <div class="plus-minus-btns" id="minusbtn">
     <i class="fas fa-minus" style="padding-right: 20px"></i>
   </div>
   <div class="admit-amount">
     <ul>
-        <h4>one</h4>
-        <!-- <h4>two</h4>
-        <h4>three</h4>
-        <h4>four</h4>
-        <h4>five</h4> -->
-      </ul>
+      <h4 id="active_value">one</h4>
+    </ul>
   </div>
-  <div class="plus-minus-btns">
+  <div class="plus-minus-btns" id="plusbtn">
     <i class="fas fa-plus" style="padding-left: 40px"></i>
   </div>
 </div>
 <br>
 <br>
 <div class="pay-btn-container">
-  <%= simple_form_for ([@club, @admission]) do |f|%>
-  <%= f.submit "PAY" , class: "pay-btn"%>
+  <%= form_tag admissions_path do %>
+  <%= hidden_field_tag 'club_id', @club.id %>
+  <%= hidden_field_tag 'admit_cnt', 1 %>
+  <%= submit_tag 'ADMIT', class: 'pay-btn' %>
   <% end %>
 </div>
+
+<script>
+  const values = [ "one", "two", "three", "four", "five"]
+  const active = document.querySelector('#active_value')
+  const plusBtn = document.querySelector("#plusbtn");
+  const minusBtn = document.querySelector("#minusbtn");
+  const admitCnt = document.querySelector("#admit_cnt");
+
+  plusbtn.addEventListener("click", (event) => {
+    cycleActiveValue("plus")
+  });
+
+
+    minusbtn.addEventListener("click", (event) => {
+      cycleActiveValue("minus")
+    });
+
+  const cycleActiveValue = (action) => {
+    console.log(action)
+
+  const currentIndex = values.indexOf(active.innerHTML)
+  let newIndex = currentIndex;
+  if (action === "plus") {
+    newIndex = currentIndex + 1
+
+  } else if (action === "minus") {
+    newIndex = currentIndex - 1
+  }
+
+  if (newIndex > values.length - 1) {
+    newIndex = 0
+
+   } else if (newIndex < 0) {
+    newIndex = values.length - 1
+   }
+
+   active.innerHTML = values[newIndex]
+   console.log(newIndex + 1)
+   admitCnt.value = newIndex + 1
+  }
+
+</script>
+
+
+
+
