@@ -18,10 +18,7 @@ class AdmissionsController < ApplicationController
   def show
     @admission = Admission.find(params[:id])
      @qr = RQRCode::QRCode.new(@admission.qr, size: 4, level: :h)
-
-
-
-    # @qr = RQRCode::QRCode.new("QRCODE#{@admission.id} #{@admission.club.name}", size: 2, level: :h)
+   # @qr = RQRCode::QRCode.new("QRCODE#{@admission.id} #{@admission.club.name}", size: 2, level: :h)
   end
 #  private
 
