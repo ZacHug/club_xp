@@ -18,6 +18,12 @@
 <br>
 <h5 class="text-gold margin-15px-left">Videos:</h5>
 <% @club.videos.each do |video| %>
+
+<br>
+<div class="text-white margin-15px-left">
+
+    <span class="video_size"> <%= time_ago_in_words(video.created_at) %> ago </span>
+  </div>
  <div class="video-container" style="border-bottom: 1px solid white">
     <video autoplay muted loop src="
       <%= cl_video_path video.video %>
