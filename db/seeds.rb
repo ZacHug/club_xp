@@ -302,7 +302,7 @@ Comment.create!(
   user: mg
   )
 Comment.create!(
-  content: "Found Le Wagon because of Club XP" ,
+  content: "I found Le Wagon club because of Club XP such a wonderful app" ,
   club: club11,
   user:antoine
   )
@@ -312,7 +312,7 @@ Comment.create!(
   user: aline
   )
 Comment.create!(
-  content: "10/10 would definately come back" ,
+  content: "10/10 would definitely come back" ,
   club: club11,
   user: martin
   )
@@ -326,11 +326,6 @@ Comment.create!(
   club: club11,
   user: tim
   )
-# Comment.create!(
-#   content: "" ,
-#   club11: ,
-#   user:
-#   )
 puts "Finished!"
 
 puts "adding music genre to a club"
@@ -355,6 +350,9 @@ ClubGenre.create!( name: "Hip-Hop" , club: club9)
 ClubGenre.create!( name: "Dancehall" , club: club9)
 ClubGenre.create!( name: "Hip-Hop" , club: club10)
 ClubGenre.create!( name: "Dancehall" , club: club10)
+
+ClubGenre.create!(name: "R&B", club: club11)
+ClubGenre.create!(name: "Pop", club: club11)
 
 puts "Finished!"
 

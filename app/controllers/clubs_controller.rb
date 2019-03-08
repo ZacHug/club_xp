@@ -23,5 +23,9 @@ skip_before_action :authenticate_user!
     if user_signed_in?
       @favorite_club = current_user.favorites.find_by(club_id: @club.id)
     end
+
+    if Admission.where(user_id: current_user, club_id: @club)!= []
+      @admission =  Admission.where(user_id: current_user, club_id: @club)[0]
+    end
   end
 end
