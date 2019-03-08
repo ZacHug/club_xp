@@ -99,7 +99,7 @@ club1 = Club.create!(
 club2 = Club.create!(
     name: "Apt. 200",
     address: "3643 Blvd St Laurent, Montreal",
-    remote_photo_url: "https://images.unsplash.com/photo-1541057591728-77510a9ea77f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+    remote_photo_url: "https://i.pinimg.com/236x/78/3b/b7/783bb7727f907c16472275ed0321831f--montreal-classy.jpg",
     description: "Buzzy, brick-lined bar with hip, vintage decor, a pool table & arcade games, plus bottle service.",
     price: 10,
     postalcode: ", QC H2X 2V5",
@@ -132,7 +132,7 @@ club4 = Club.create!(
 club5 = Club.create!(
     name: "Club École Privée",
     address: "3500 Blvd St Laurent, Montreal",
-    remote_photo_url: "https://montrealx.com/wp-content/uploads/2017/06/best-top-newest-montreal-nightclubs-rooftop-bar-Somwhr-Liquor-Lounge-2017-Club-Ecole-Privee.jpg",
+    remote_photo_url: "http://localmontrealtours.com/wp-content/uploads/2016/01/montreal-night-time-bachlor-party-circus.jpg",
     description: "Dimly-lit nightspot with a classy, lounge vibe, featuring house dance music, DJs & bottle service.",
     price: 15,
     postalcode: ", QC H2X 2V2",
@@ -142,7 +142,7 @@ club5 = Club.create!(
 club6 = Club.create!(
     name: "Mme Lee",
     address: "151 St Ontario,  Montreal",
-    remote_photo_url: "https://lh4.googleusercontent.com/proxy/TemLhSEOrKdm3WYxt6apiFMSfqwaexu0ShxObPeXaFtGBssP1QoOcthntpimXJtM4DTqRuxuY4Ho5mYb_mUBBPkhq6eBLLxeDnYYwfrUZiiyw8686uhvHcTYMpYEFBvIIQ2XMdtKT9NAjOmzfGqoUAD2aXCT7Co=w99-h99-n-k-no",
+    remote_photo_url: "https://www.narcity.com/uploads/245008_ff217820f6319ac87ff21a7a31e816faadf77d07.jpg",
     description: "Cosmopolitan nightspot with music & bottle service in a sophisticated atmosphere.",
     price: 20,
     postalcode: ", QC H2X 1H5",
@@ -162,7 +162,7 @@ club7 = Club.create!(
 club8 = Club.create!(
     name: "Balattou Club",
     address: "4372 Blvd St Laurent, Montreal",
-    remote_photo_url: "http://balattou.com/wp-content/uploads/2014/02/slider14-900x350.jpg",
+    remote_photo_url: "https://ville.montreal.qc.ca/memoiresdesmontrealais/sites/ville.montreal.qc.ca.memoiresdesmontrealais/files/9590_-_1er_prix.jpg",
     description: "Cozy nightspot with live world-beats performances & visiting DJs on weekend nights.",
     price: 10,
     postalcode: ", QC H2W 1Z5",
@@ -172,7 +172,7 @@ club8 = Club.create!(
 club9 = Club.create!(
     name: "Le Belmont",
     address: "4483 Blvd St Laurent, Montreal",
-    remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
+    remote_photo_url: "http://go-montreal.com/images/nightlife/montreal-nightlife-2-lg.jpg",
     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
     price: 20,
     postalcode: ", QC H2W 1Z8",
@@ -182,7 +182,7 @@ club9 = Club.create!(
 club10 = Club.create!(
     name: "Le Salon Daomé",
     address: "4465 Blvd St Laurent, Montreal",
-    remote_photo_url: "http://boulevardsaintlaurent.com/custom-content/uploads/2018/05/SalonDaome-Cover1.png",
+    remote_photo_url: "http://fohonline.com/site/wp-content/uploads/LA_Daome_1-1000x667.jpg",
     description: "Laid-back nightclub with a roster of international DJs spinning electronic music, plus theme nights.",
     price: 15,
     postalcode: ", QC H2W 1Z8",
@@ -192,7 +192,7 @@ club10 = Club.create!(
 club11 = Club.create!(
     name: "Le Wagon",
     address: "5333 Avenue Casgrain",
-    remote_photo_url: "https://cdn-images-1.medium.com/max/1600/1*MNAbkCk1IgeC5NLPa0d-NQ.jpeg",
+    remote_photo_url: "https://static1.squarespace.com/static/5b761bbba9e0280db08adfe2/t/5c0ab7a1352f5347b3fab950/1544206248651/35398987_2213990208628129_4578004695913594880_o.jpg?format=2500w",
     description: "Come experince Le Wagon nightclub, cozy-vibe with live acts and DJs",
     price: 20,
     postalcode: ",QC  H2T 1X3",
