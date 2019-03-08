@@ -26,9 +26,10 @@ if (dropbtn) {
 const distanceLink = document.querySelector("#sort-by-distance");
 
 if (distanceLink) {
-  navigator.geolocation.getCurrentPosition((position) => {
-    // SINCE WE DONT HAVE HTTPS
-    distanceLink.href = "/clubs?lat=45.5259727&lng=-73.5953516"
-    // distanceLink.href = `/clubs?lat=${position.coords.latitude}&lng=${position.coords.longitude}`
-  });
+  // SINCE WE DONT HAVE HTTPS
+  distanceLink.href = "/clubs?lat=45.5259727&lng=-73.5953516";
+
+  // navigator.geolocation.getCurrentPosition((position) => {
+  //   distanceLink.href = `/clubs?lat=${position.coords.latitude}&lng=${position.coords.longitude}`
+  // });
 }
