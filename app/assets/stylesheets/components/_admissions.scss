@@ -66,16 +66,19 @@
   border-bottom: 1px solid white;
 }
 
-.total-line {
-
-}
-
 .summary-container {
   display: flex;
   justify-content: space-between;
   width: 92vw;
 }
 
+.qrwallet-container {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 92vw;
+}
 .confirmation-pay-btn-container {
   display: flex;
   align-items: center;
@@ -89,4 +92,9 @@
   font-size: 28px;
 }
 
+.date-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 

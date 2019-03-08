@@ -18,14 +18,18 @@
 </div>
 <div>
   <ul class="nav nav-tabs">
-    <li class="active"><a href="#comments" data-toggle="tab">live feed</a></li>
-    <li><a href="#videos" data-toggle="tab">streams</a></li>
-    <li><a href="#description" data-toggle="tab">details</a></li>
+    <li class="active"><a href="#comments" data-toggle="tab">Live Feed</a></li>
+    <li><a href="#videos" data-toggle="tab">Streams</a></li>
+    <li><a href="#description" data-toggle="tab">Details</a></li>
   </ul>
   <div class="tab-content">
 
     <div class="tab-pane fade in active"  id="comments">
+<% if @admission != nil %>
+<% if @admission.state == "paid" %>
       <%= render "form" , club: @club, comment: @comment%>
+<% end %>
+<% end %>
       <%= render "comments" %>
     </div>
     <div class="tab-pane" id="videos">

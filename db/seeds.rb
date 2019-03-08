@@ -92,7 +92,8 @@ club1 = Club.create!(
     remote_photo_url: "https://encrypted-tbn0.gstatic.com/7images?q=tbn:ANd9GcRblYbXP06x8Hfzzg6YQ5xmR9IVChDS9Vy2QnzGxScCWe1pTJv4",
     description: " Located inside Hotel10, Blvd44 is a popular Montreal nightclub with three distinct sections (main room, mezzanine and terrace), each offering its own unique atmosphere to please everyone. A spacious dance floor and numerous VIP booth await you at Blvd44, a popular and casual nightclub where you can socialize and have a drink with friends in private.",
     price: 20,
-    postalcode: ", QC H2X 2T2"
+    postalcode: ", QC H2X 2T2",
+    hotness: 3
   )
 
 club2 = Club.create!(
@@ -101,7 +102,8 @@ club2 = Club.create!(
     remote_photo_url: "https://images.unsplash.com/photo-1541057591728-77510a9ea77f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
     description: "Buzzy, brick-lined bar with hip, vintage decor, a pool table & arcade games, plus bottle service.",
     price: 10,
-    postalcode: ", QC H2X 2V5"
+    postalcode: ", QC H2X 2V5",
+    hotness: 4
   )
 
 club3 = Club.create!(
@@ -113,7 +115,8 @@ club3 = Club.create!(
 
     description: "Posh nightspot featuring 2 dance floors with eclectic DJ–spun beats & a terrace.",
     price: 15,
-    postalcode: ", QC H2W 1X8"
+    postalcode: ", QC H2W 1X8",
+    hotness: 3
   )
 
 club4 = Club.create!(
@@ -122,7 +125,8 @@ club4 = Club.create!(
     remote_photo_url: "https://media-cdn.tripadvisor.com/media/photo-s/06/f2/de/e8/stereo-nightclub.jpg",
     description: "Stereo nightclub is an afterhours club in Montreal, Quebec, Canada which primarily features house music and techno. The afterhours section of the club is always open on Fridays and Saturdays. Stereo nightclub was created by DJ/producer Angel Moraes and later co-owned by Tommy Piscardeli.",
     price: 10,
-    postalcode: ", QC H2L 2E3"
+    postalcode: ", QC H2L 2E3",
+    hotness: 5
   )
 
 club5 = Club.create!(
@@ -131,7 +135,8 @@ club5 = Club.create!(
     remote_photo_url: "https://montrealx.com/wp-content/uploads/2017/06/best-top-newest-montreal-nightclubs-rooftop-bar-Somwhr-Liquor-Lounge-2017-Club-Ecole-Privee.jpg",
     description: "Dimly-lit nightspot with a classy, lounge vibe, featuring house dance music, DJs & bottle service.",
     price: 15,
-    postalcode: ", QC H2X 2V2"
+    postalcode: ", QC H2X 2V2",
+    hotness: 2
   )
 
 club6 = Club.create!(
@@ -140,7 +145,8 @@ club6 = Club.create!(
     remote_photo_url: "https://lh4.googleusercontent.com/proxy/TemLhSEOrKdm3WYxt6apiFMSfqwaexu0ShxObPeXaFtGBssP1QoOcthntpimXJtM4DTqRuxuY4Ho5mYb_mUBBPkhq6eBLLxeDnYYwfrUZiiyw8686uhvHcTYMpYEFBvIIQ2XMdtKT9NAjOmzfGqoUAD2aXCT7Co=w99-h99-n-k-no",
     description: "Cosmopolitan nightspot with music & bottle service in a sophisticated atmosphere.",
     price: 20,
-    postalcode: ", QC H2X 1H5"
+    postalcode: ", QC H2X 1H5",
+    hotness: 1
   )
 
 club7 = Club.create!(
@@ -149,7 +155,8 @@ club7 = Club.create!(
     remote_photo_url: "http://www.barmontreal.com/wp-content/themes/corporate/images/tmp/ivy/ivypic.jpg",
     description: "Vibrant, over-18 nightspot open weekends only & featuring DJs, dancing & bars serving drinks.",
     price: 25,
-    postalcode: ", QC H2X 2V1"
+    postalcode: ", QC H2X 2V1",
+    hotness: 4
   )
 
 club8 = Club.create!(
@@ -158,7 +165,8 @@ club8 = Club.create!(
     remote_photo_url: "http://balattou.com/wp-content/uploads/2014/02/slider14-900x350.jpg",
     description: "Cozy nightspot with live world-beats performances & visiting DJs on weekend nights.",
     price: 10,
-    postalcode: ", QC H2W 1Z5"
+    postalcode: ", QC H2W 1Z5",
+    hotness: 2
   )
 
 club9 = Club.create!(
@@ -167,7 +175,8 @@ club9 = Club.create!(
     remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
     price: 20,
-    postalcode: ", QC H2W 1Z8"
+    postalcode: ", QC H2W 1Z8",
+    hotness: 2
   )
 
 club10 = Club.create!(
@@ -176,7 +185,8 @@ club10 = Club.create!(
     remote_photo_url: "http://boulevardsaintlaurent.com/custom-content/uploads/2018/05/SalonDaome-Cover1.png",
     description: "Laid-back nightclub with a roster of international DJs spinning electronic music, plus theme nights.",
     price: 15,
-    postalcode: ", QC H2W 1Z8"
+    postalcode: ", QC H2W 1Z8",
+    hotness: 4
   )
 
 club11 = Club.create!(
@@ -322,9 +332,6 @@ puts "adding music genre to a club"
 
 ClubGenre.create!( name: "Hip-Hop" , club: club1)
 ClubGenre.create!( name: "Dancehall" , club: club1)
-<<<<<<< Updated upstream
-
-=======
 ClubGenre.create!( name: "Hip-Hop" , club: club2)
 ClubGenre.create!( name: "Dancehall" , club: club2)
 ClubGenre.create!( name: "Hip-Hop" , club: club3)
@@ -343,9 +350,9 @@ ClubGenre.create!( name: "Hip-Hop" , club: club9)
 ClubGenre.create!( name: "Dancehall" , club: club9)
 ClubGenre.create!( name: "Hip-Hop" , club: club10)
 ClubGenre.create!( name: "Dancehall" , club: club10)
+
 ClubGenre.create!(name: "R&B", club: club11)
 ClubGenre.create!(name: "Pop", club: club11)
->>>>>>> Stashed changes
 
 puts "Finished!"
 
