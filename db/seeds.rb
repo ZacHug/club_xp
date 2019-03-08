@@ -197,7 +197,8 @@ club11 = Club.create!(
     remote_photo_url: "https://cdn-images-1.medium.com/max/1600/1*MNAbkCk1IgeC5NLPa0d-NQ.jpeg",
     description: "Come experince Le Wagon nightclub, cozy-vibe with live acts and DJs",
     price: 20,
-    postalcode: ",QC  H2T 1X3"
+    postalcode: ",QC  H2T 1X3",
+    hotness: 5
   )
 puts "Club done"
 
