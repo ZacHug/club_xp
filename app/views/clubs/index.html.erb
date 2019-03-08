@@ -13,9 +13,9 @@
 
             <h1><%= club.name %></h1>
             <% if @coordinates.nil? %>
-              <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between([params[:lat].to_f,params[:lng].to_f], club.geocode)).round(1)  %></strong> KM</span>
+              <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between([params[:lat].to_f,params[:lng].to_f], [club.latitude, club.longitude])).round(1)  %></strong> KM</span>
             <% elsif !@coordinates.nil? %>
-              <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between(@coordinates, club.geocode)).round(1)  %> KM </strong></span>
+              <span style="font-size: 23px"><strong> <%= (Geocoder::Calculations.distance_between(@coordinates, [club.latitude, club.longitude])).round(1)  %> KM </strong></span>
             <% end %>
             <span style="font-size: 32px"><% club.hotness.times do %>
               <%= image_tag 'clubxp-fire.svg'%>
