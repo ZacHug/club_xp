@@ -4,7 +4,7 @@
 
   .
    <div id='club-header'>
-    <h1 class="padding-show-h1 text-white padding-left"><strong><%= @admission.club.name  %></strong></h1>
+    <h3 class="padding-show-h1 text-white padding-left"><strong><%= @admission.club.name  %></strong></h3>
     <div class="club-rating">
       <% 4.times do %>
         <%= image_tag 'clubxp-fire.svg'%>
@@ -13,10 +13,11 @@
   </div>
   <br>
   <div class="payment-summary-containter">
-    <span class="text-gold margin-15px-left" style="margin-bottom: 15px">DATE   :</span>
-    <span class="text-white "><%= @admission.created_at.strftime("%b %d, %Y") %></span>
-
     <p class="text-gold margin-15px-left" >summary</p>
+    <div class="date-container"></div>
+      <span class="text-gold margin-15px-left" style="margin-bottom: 15px">DATE   :</span>
+      <span class="text-white "><%= @admission.created_at.strftime("%b %d, %Y") %></span>
+    </div>
     <div class="line"></div>
   </div>
 

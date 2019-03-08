@@ -89,7 +89,9 @@
 
 .text-white{
   color:white;
-
+}
+.text-neon {
+  color: #4d4dff;
 }
 
 .text-gold {
@@ -140,5 +142,9 @@ form#new_comment {
     border: none;
     border-radius: 0 5px 5px 0;
     background-color: #10316b;
+  }
+
+  .videofont {
+    font-size: 13px;
   }
 }
