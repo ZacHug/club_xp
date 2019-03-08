@@ -11,7 +11,7 @@
 <div id="homepage-cta">
 
   <div class="homepage_text">
-    <h2>See What's Happening Live...</h2>
+    <h2 class="text-white">See What's Happening Live...</h2>
   </div>
 
   <div class="search-box">
@@ -21,7 +21,7 @@
     </form> -->
 
   <!-- new search bar -->
-  <div class="search-bar" style="padding-top: 28px; padding-right: 30px;">
+  <div class="search-bar">
       <form action="/clubs">
         <input id="search-bar-input" placeholder="...what city are you in?"  type="text" name="address" autocomplete="off"/>
         <div class="after"></div>
@@ -29,11 +29,13 @@
       </form>
       <h4>&nbsp;</h4>
     </div>
-  </div>
 
+  </div>
+  <div class="log-in-btn-container">
   <br>
   <%= link_to t(".sign_in", default: "Login"), new_user_session_path, class: "navbar-club_xp-item navbar-club_xp-link log-in-btn" %>
   <%= link_to t(".sign_in", default: "Sign-Up?"), new_user_registration_path, class: "navbar-club_xp-item navbar-club_xp-link log-in-btn" %>
+  </div>
 </div>
 
 
@@ -67,6 +69,8 @@ document.addEventListener("DOMContentLoaded", (e) => {
     })
 
   });
-
-  document.getElementById('search-bar-input').click();
+  // setTimeout(() => {
+    // console.log("clicking")
+    // document.querySelector('.after').click();
+  // }, 1000)
 </script>

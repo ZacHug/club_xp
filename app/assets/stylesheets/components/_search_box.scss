@@ -37,9 +37,17 @@
 // }
 
 // EXPERIMENTING WITH SEARCH BARS
-
+.log-in-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 .search-bar {
-  transform: scale(0.7);
+  transform: scale(1.4);
+  padding-top: 20px;
+
+
   p {
     text-align: center;
     color: #f7b633;
@@ -97,13 +105,13 @@
   }
   input {
     background: none !important;
-    border: 3px solid #f7b633 !important;
+    border: 3px solid #4d4dff !important;
     border-radius: 26px;
     box-sizing: border-box;
     padding: 5px 15px 7px;
     font-size: 14px;
     // color: #fff;
-    color: white;
+    color: #fff;
     z-index: 2;
     position: relative;
     cursor: pointer;
@@ -180,7 +188,7 @@
    ****************************/
   form.open {
     width: 250px;
-    color: #f7b633;
+    color: #4d4dff;
   }
   form.open .after {
     z-index: 3;
