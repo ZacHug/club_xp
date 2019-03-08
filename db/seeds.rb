@@ -65,7 +65,7 @@ tim = User.create!(
   password: "123456",
   remote_photo_url: "https://media.licdn.com/dms/image/C4D03AQGkR61Um2wN7g/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=zAr17U9SCK3Z_xW7C6Tue-XGW_FmdX3qNKPdhAWYyKw"
   )
-puts "done User"
+puts "Finished!"
 
 require 'faker'
 
@@ -163,11 +163,7 @@ club8 = Club.create!(
 
 club9 = Club.create!(
     name: "Le Belmont",
-
-
-
     address: "4483 Blvd St Laurent, Montreal",
-
     remote_photo_url: "http://www.lebelmont.com/v2/accueil.jpg",
     description: "High-energy hub for live acts, DJs & dancing, plus pool tables, improv nights & events.",
     price: 20,
@@ -191,35 +187,67 @@ club11 = Club.create!(
     price: 20,
     postalcode: ",QC  H2T 1X3"
   )
-puts "Club done"
+puts "Finished!"
 
 
 puts "Creating videos"
-# Video.create!(
-#   club: club1,
-#   user: User.first,
-#   video: File.open("db/videos/01BLVD44.mp4")
-# )
+# Le Belmont
+Video.create!(
+  club: club9,
+  user: User.first,
+  video: File.open("db/videos/02APT200.mp4")
+)
 
+
+# Le Salon Daome
+Video.create!(
+  club: club10,
+  user: User.first,
+  video: File.open("db/videos/dancer.mp4")
+    )
+Video.create!(
+  club: club10,
+  user: User.first,
+  video: File.open("db/videos/dancer1.mp4")
+    )
+Video.create!(
+  club: club10,
+  user: User.first,
+  video: File.open("db/videos/club10.mp4")
+    )
+Video.create!(
+  club: club10,
+  user: User.first,
+  video: File.open("db/videos/7seconds.mp4")
+  )
 Video.create!(
   club: club10,
   user: User.first,
   video: File.open("db/videos/02APT200.mp4")
-
 )
-
 Video.create!(
   club: club10,
   user: User.first,
   video: File.open("db/videos/03MUZ.mp4")
 )
-
 Video.create!(
   club: club10,
   user: User.first,
   video: File.open("db/videos/04SAH.mp4")
 )
 
+# Le Wagon Videos
+Video.create!(
+  club: club11,
+  user: User.first,
+  video: File.open("db/videos/lewagon1.mp4")
+  )
+  # Video.create!(
+  # club: club11,
+  # user: User.first,
+  # video: File.open("db/videos/")
+  #   )
+puts "Finished!"
 
 puts "creating Comment"
 Comment.create!(
@@ -293,7 +321,7 @@ Comment.create!(
 #   club11: ,
 #   user:
 #   )
-puts " done comment"
+puts "Finished!"
 
 puts "adding music genre to a club"
 
@@ -301,19 +329,14 @@ ClubGenre.create!( name: "Hip-Hop" , club: club1)
 ClubGenre.create!( name: "Dancehall" , club: club1)
 
 
-puts "done"
+puts "Finished!"
 
 puts "adding favorites to wilson"
-
 Favorite.create!(user: User.first , club: club1)
 Favorite.create!(user: User.first , club: club2)
 Favorite.create!(user: User.first , club: club3)
+puts "Finished!"
 
-
-puts "Done adding favorites to wilson"
-
-
-puts ""
 
 OTHER_CLUBS = [club2, club3, club4, club5, club6, club7, club8, club9, club10]
 OTHER_USERS = User.where.not(first_name:["Wilson", "Ryan", "Martin", "Antoine", "Stephane", "Aline", "Marie-G", "Timothée*"])
