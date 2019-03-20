@@ -72,13 +72,6 @@
   width: 92vw;
 }
 
-.qrwallet-container {
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 92vw;
-}
 .confirmation-pay-btn-container {
   display: flex;
   align-items: center;
@@ -94,7 +87,8 @@
 
 .date-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 15px;
 }
 
