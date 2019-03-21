@@ -1,6 +1,5 @@
 <div class="navbar-club_xp">
   <!-- Logo -->
-
   <a href="javascript:history.back()"><i class="fas fa-chevron-left"></i></a>
 
 
@@ -48,7 +47,7 @@
       <% end %>
     <% else %>
       <%= simple_form_for ([@club, @favorite]) do |f| %>
-      <%= f.submit "Favs", :type => :image, :src => image_path("dislike.svg"), :class =>"show-flaticon" %>
+      <%= f.submit "Favs", :type => :image, :src => image_path("like.png"), :class =>"show-flaticon" %>
      <% end %>
     <% end %>
   <% elsif controller_name == "clubs" && action_name == "index"%>

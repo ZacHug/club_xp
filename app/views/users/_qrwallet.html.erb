@@ -1,0 +1,26 @@
+<br>
+<h2 class="text-gold margin-15px-left">QR Receipts</h2>
+<div class="line" style="padding-top: 10px"></div>
+<% @user.admissions.each do |admission| %>
+  <% if admission.state == "paid" %>
+  <div class="date-container">
+      <span class="text-white"><%= admission.created_at.strftime("%b %d, %Y") %></span>
+  </div>
+<br>
+      <h4><span class="text-white margin-15px-left"><%= admission.club.name %></span></h4>
+    <div class="qrwallet-container text-gold margin-15px-left" style="font-size: 20px;">
+      <h5>Status: <span class="text-white"><%= admission.state.capitalize %></span></h5>
+
+      <h5>Total :<span class="text-white">$<%= admission.amount %></span>
+    </div></h5>
+    <div class="qrcode" style="border: 20px solid white" style="margin-bottom: 50px;">
+      <%= raw RQRCode::QRCode.new(admission.qr, size: 4, level: :h).as_html %>
+      <br>
+    </div>
+    <br>
+    <div class="line" style="margin-bottom: 40px"></div>
+  <% end %>
+<% end %>
+
+
+<!-- the styling for this whole page is in the showpage_comps sorry -->

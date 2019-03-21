@@ -58,27 +58,32 @@
   position: fixed;
   top: 50vh;
 }
-
+.back-to-club-btn {
+  background-color: #10316b;
+  color: #fff;
+  padding: 5px 10px;
+  font-size: 18px;
+  line-height: 1.33333;
+  border-radius: 8px;
+  border: none;
+}
+.back-to-club {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .line {
   margin: 15px;
   width: 93vw;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid #f7b633;
 }
 
 .summary-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 92vw;
 }
 
-.qrwallet-container {
-  display: flex;
-  padding: 10px;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  width: 92vw;
-}
 .confirmation-pay-btn-container {
   display: flex;
   align-items: center;
@@ -94,7 +99,8 @@
 
 .date-container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+  margin-right: 15px;
 }
 

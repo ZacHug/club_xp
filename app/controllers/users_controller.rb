@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-
   def show
     @user = current_user
     @favorites = Favorite.all
@@ -7,8 +6,5 @@ class UsersController < ApplicationController
 
   def update
     @user = current_user
-
   end
-
 end
-

@@ -1,9 +1,10 @@
-<h2>Sign up</h2>
+<br>
+<h2 class="text-gold">Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-input margin-15px-left-and-right" style="color: gray">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -24,12 +25,10 @@
     <%= f.input :photo  %>
     <%= f.input :photo_cache , as: :hidden  %>
   </div>
-
-  <div class="form-actions">
-
-    <%= f.button :submit, "Sign up" %>
-
+  <div class="margin-15px-left log-in-btn">
+    <%= submit_tag 'Sign-Up' %>
   </div>
 <% end %>
+<br>
 
 <%= render "devise/shared/links" %>

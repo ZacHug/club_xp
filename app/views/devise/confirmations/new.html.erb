@@ -1,10 +1,11 @@
-<h2>Resend confirmation instructions</h2>
+<br>
+<h2 class="text-gold">Resend confirmation instructions</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
   <%= f.error_notification %>
   <%= f.full_error :confirmation_token %>
 
-  <div class="form-inputs">
+  <div class="class="form-input margin-15px-left-and-right" style="color: gray">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -12,9 +13,10 @@
                 input_html: { autocomplete: "email" } %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Resend confirmation instructions" %>
+  <div class="margin-15px-left log-in-btn">
+    <%= submit_tag 'Resend Confirmation instructions' %>
   </div>
 <% end %>
+<br>
 
 <%= render "devise/shared/links" %>
