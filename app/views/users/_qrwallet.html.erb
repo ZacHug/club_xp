@@ -4,17 +4,18 @@
 <% @user.admissions.each do |admission| %>
   <% if admission.state == "paid" %>
   <div class="date-container">
-      <span class="text-gold"><%= admission.created_at.strftime("%b %d, %Y") %></span>
+      <span class="text-white"><%= admission.created_at.strftime("%b %d, %Y") %></span>
   </div>
-
+<br>
+      <h4><span class="text-white margin-15px-left"><%= admission.club.name %></span></h4>
     <div class="qrwallet-container text-gold margin-15px-left" style="font-size: 20px;">
-      <h4><strong>Club: </strong><span class="text-white"><%= admission.club.name %></span></h4>
-      <h4><strong>Status: </strong><span class="text-white"><%= admission.state.capitalize %></span></h4>
+      <h5>Status: <span class="text-white"><%= admission.state.capitalize %></span></h5>
 
-      <h4><strong>Total :</strong><span class="text-white">$<%= admission.amount %></span>
-    </div></h4>
+      <h5>Total :<span class="text-white">$<%= admission.amount %></span>
+    </div></h5>
     <div class="qrcode" style="border: 20px solid white" style="margin-bottom: 50px;">
       <%= raw RQRCode::QRCode.new(admission.qr, size: 4, level: :h).as_html %>
+      <br>
     </div>
     <br>
     <div class="line" style="margin-bottom: 40px"></div>

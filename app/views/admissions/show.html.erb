@@ -1,30 +1,28 @@
 <div class="payment-receipt-container" style="margin-bottom: 85px">
-<div class="center-img" style="background-image: url('<%= @admission.club.photo %>')"></div>
-<h2 class="text-gold margin-15px-left">Payment Receipt</h2>
-<br>
-<div class="summary-container text-gold margin-15px-left" style="font-size: 20px;">
-
-  <li>Status: <span class="text-white"><%= @admission.state.capitalize %></span></li>
-  <br>
-  <li>Club: <span class="text-white"><%= @admission.club.name %></span></li>
-  <br>
-  <br>
-</div>>
-<br>
-
-
-<div class="qrcode-container">
-  <div class="line"></div>
-  <h4 class="text-gold"><strong>YOUR ENTRANCE QRCODE</strong></h4>
-  <div class="line"></div>
-  <br>
-  <div class="qrcode" style="border: 20px solid white">
-  <%= raw @qr.as_html %>
+  <div class="center-img" style="background-image: url('<%= @admission.club.photo %>')"></div>
+  <div class="back-to-club" style="margin-top: 2px">
+    <%= link_to "Back To Club", club_path(@admission.club), class: "back-to-club-btn"%>
   </div>
-  <br>
-  <div class="line"></div>
-  <h4 class=text-white><strong>THANK YOU</strong></h4>
-  <h4 class="text-gold"><strong>ENJOY YOUR EXPERIENCE</strong></h4>
-  <div class="line"></div>
-</div>
+  <h2 class="text-gold margin-15px-left">Payment Receipt</h2>
+  <div class="line" style="margin-top: 25px"></div>
+  <div class="summary-container text-gold margin-15px-left">
+    <br>
+    <h4>Club: <span class="text-white"><%= @admission.club.name %></span></h4>
+    <br>
+    <h4>Status: <span class="text-white"><%= @admission.state.capitalize %></span></h4>
+  </div>
+
+  <div class="qrcode-container">
+    <h4 class="text-white"><strong>ENTRANCE QRCODE</strong></h4>
+    <div class="line"></div>
+    <br>
+    <div class="qrcode" style="border: 15px solid white">
+    <%= raw @qr.as_html %>
+    </div>
+    <br>
+    <div class="line"></div>
+    <h4 class=text-white><strong>THANK YOU</strong></h4>
+    <h4 class="text-gold"><strong>ENJOY YOUR EXPERIENCE</strong></h4>
+    <div class="line"></div>
+  </div>
 </div>

@@ -11,7 +11,7 @@ td {
   border-left: solid 10px #000;
   padding: 0;
   margin: 0;
-  width: 0px;
+  width: 10px;
   height: 10px;
 }
 
@@ -31,6 +31,7 @@ td.white { border-color: #fff; }
   color: $darkblue
 }
 
+
 .qrwallet-container {
   display: flex;
   padding: 10px;
@@ -38,4 +39,3 @@ td.white { border-color: #fff; }
   flex-wrap: wrap;
   width: 92vw;
 }
-
