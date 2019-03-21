@@ -1,9 +1,10 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<br>
+<h2 class="text-gold">Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-input margin-15px-left-and-right" style="color: gray">
     <%= f.input :email, required: true, autofocus: true %>
 
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -25,10 +26,11 @@
     <%= f.input :photo_cache , as: :hidden  %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+  <div class="margin-15px-left log-in-btn">
+    <%= submit_tag 'Update' %>
   </div>
 <% end %>
+<br>
 
 <h3>Cancel my account</h3>
 

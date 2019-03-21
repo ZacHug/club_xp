@@ -45,9 +45,8 @@
   margin-top: 20px;
 }
 .search-bar {
-  transform: scale(1.25);
+  transform: scale(1.12);
   padding-top: 20px;
-  margin-bottom: 18px;
 
 
   p {
@@ -75,7 +74,7 @@
       transform: scale(0);
     }
     80% {
-      transform: scale(1.2);
+      transform: scale(.8);
     }
     100% {
       transform: scale(1);
